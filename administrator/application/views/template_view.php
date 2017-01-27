@@ -4,6 +4,10 @@
 <head>
 	<title>offline</title>
 	<link rel="stylesheet" type="text/css" href="/administrator/css/style1.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<link rel="stylesheet" href="web/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
 <? 
@@ -15,7 +19,7 @@
 				<div class="head_c2"></div>
 				<div class="head_c3">
 					<div class="register">
-						<div class="reg_le"></div><div id="uLogin" data-ulogin="display=small;theme=classic;fields=first_name,last_name,email;providers=facebook;redirect_uri=http%3A%2F%2Fmvc.com//admin/user/facebook;mobilebuttons=0;"></div>
+						<div class="reg_le"></div><div id="uLogin" data-ulogin="display=small;theme=classic;fields=first_name,last_name,email;providers=facebook;redirect_uri=http%3A%2F%2Foffline.com//admin/user/facebook;mobilebuttons=0;"></div>
 						<div class="reg_r"><?
 	if ($_SESSION['auth']) {?>
 	<div class="">
@@ -25,8 +29,8 @@
 		</div>
 		<div class="reg_m">
 			<?if($_SESSION['auth']){?>
-			<a href="?route=profile">Профиль</a>
-			<a href="/procces/deletecookie.php" class="a_exit">Выход</a>
+			<a href="/admin/user/profile">Профиль</a>
+			<a href="/admin/user/exit_user" class="a_exit">Выход</a>
 			<?}?>
 		</div>
 	</div><?

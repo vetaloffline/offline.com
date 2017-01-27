@@ -19,7 +19,7 @@ class Route
 
 		$routes_modify = explode('&',$routes[2]);
 		$id_product = $routes_modify;
-		//var_dump($routes_modify);
+		
 		
 
 		if ( !empty($routes_modify[0]))
@@ -32,15 +32,13 @@ class Route
 			$action_name = $routes[3];
 		}
 		//var_dump($_SESSION);
-		
-		
+	
 		if (!$_SESSION['auth'] && $controller_name != 'user' && $action_name != 'auth') {
 			$host = 'http://'.$_SERVER['HTTP_HOST'].'/';
        
 			header('Location:'.$host.'admin/user/auth');
 		 } 
-		 if ($_SESSION['auth'] && $_SESSION['role'] !='10') {
-       
+		 if ($_SESSION['auth'] && $_SESSION['role'] !='10' && $action_name != 'profile') {
 			Route::ErrorPage404();
 		 }   
 
@@ -53,7 +51,7 @@ class Route
 
 		
 		//echo "Model: $model_name <br>";
-		 //echo "Controller: $controller_name <br>";
+		//echo "Controller: $controller_name <br>";
 		//echo "Action: $action_name <br>";
 		
 

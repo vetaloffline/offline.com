@@ -62,10 +62,11 @@ class Model_user extends Model{
 			header("Location: /admin/user/auth");
 			die();
 		}
-		$query = "SELECT `login`
+		$query = "SELECT `name`, `password`, `id`,`role`
 				  FROM   `users` 
 				  WHERE  `login` = '$login'";
-		if (!$this->db->makeQuery($query)){
+		$user = $this->db->makeQuery($query)[0];
+		if (!$user){
 			// нет такого логина 
 			header("Location: /admin/user/auth");
 			die();
@@ -78,11 +79,6 @@ class Model_user extends Model{
 			header("Location: /admin/user/auth");
 			die();
 		}
-		$query = "SELECT `name`, `password`, `id`,`role`
-				  FROM   `users` 
-				  WHERE   login = '".$login."'";
-		$user = $this->db->makeQuery($query)[0];
-
 		if (password_verify($password,$user['password'])){
 
 			$_SESSION['name'] = $user['name'];
@@ -97,6 +93,7 @@ class Model_user extends Model{
 	unset($_SESSION['role']);
 	unset($_SESSION['iduser']);
 	unset($_SESSION['name']);
+	unset($_SESSION['soc']);
 	header("location: /");
 	}
 
@@ -131,5 +128,47 @@ class Model_user extends Model{
 		}
 		header("Location: /");	
 	}
+
+	function getDataUser(){
+
+		$iduser = $_SESSION['iduser'];
+		$auth = $_SESSION['auth'];
+		if ($iduser && $auth) {
+			$query ="SELECT * 
+					 FROM `users` 
+					 WHERE id = '$iduser'";
+		return $this->db->makeQuery($query)[0];
+		}
+	}
+
+	function editprofile(){
+
+		$iduser = $_SESSION['iduser'];
+		$name = Lib::clearRequest($_POST['name']);
+		$surname = Lib::clearRequest($_POST['surname']);
+		$patronymic = Lib::clearRequest($_POST['patronymic']);
+		$phone = Lib::clearRequest($_POST['phone']);
+
+		if (!empty($phone) ) { 
+			$valphone = Lib::valtel($phone);
+		}else{
+			  $valphone = 1;
+			  $phone = NULL;
+			 }
+		$valname = Lib::valruss($name);
+		$valsurname = Lib::valruss($surname);
+		$valpatronymic = Lib::valruss($patronymic);
+
+		if (!$valphone || !$valname || !$valsurname || !$valpatronymic) {
+			header("Location: /admin/user/profile");
+			die();
+		}var_dump($phone);
+		$query = "UPDATE `users`
+				  SET `name`='".$name."',`surname`='".$surname."',`patronymic`='".$patronymic."',`phone`='".$phone."'
+				  WHERE id = '$iduser'";
+		$this->db->makeQuery($query);
+	}
+
+
 }
 ?>

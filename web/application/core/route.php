@@ -21,7 +21,7 @@ class Route
 				  FROM `routes` 
 				  WHERE `alias_uri` = '$uRi'";
 		$alias = $db->makeQuery($query)[0]['real_rout'];
-		
+		var_dump($uRi);
 		if ($alias) {
 			$uRi = $alias;
 		}
@@ -50,7 +50,7 @@ class Route
 
 		
 		// echo "Model: $model_name <br>";
-		// echo "Controller: $controller_name <br>";
+		 //echo "Controller: $controller_name <br>";
 		// echo "Action: $action_name <br>";
 		
 

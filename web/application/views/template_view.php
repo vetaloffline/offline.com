@@ -19,7 +19,7 @@
 				<div class="head_c2"></div>
 				<div class="head_c3">
 					<div class="register">
-						<div class="reg_le"></div><div id="uLogin" data-ulogin="display=small;theme=classic;fields=first_name,last_name,email;providers=facebook;redirect_uri=http%3A%2F%2Fmvc.com/admin/user/facebook;mobilebuttons=0;"></div>
+						<div class="reg_le"></div><div id="uLogin" data-ulogin="display=small;theme=classic;fields=first_name,last_name,email;providers=facebook;redirect_uri=http%3A%2F%2Foffline.com/admin/user/facebook;mobilebuttons=0;"></div>
 						<div class="reg_r"><?
 	if ($_SESSION['auth']) {?>
 	<div class="">
@@ -29,7 +29,7 @@
 		</div>
 		<div class="reg_m">
 			<?if($_SESSION['auth']){?>
-			<a href="?route=profile">Профиль</a>
+			<a href="/admin/user/profile">Профиль</a>
 			<a href="/admin/user/exit_user" class="a_exit">Выход</a>
 			<?}?>
 		</div>

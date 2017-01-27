@@ -122,6 +122,33 @@
 					else{}
 		}
 
+	function valtel($tel)
+	{
+	if (preg_match('/[^\d]/',$tel))
+		 {
+		 //"Ne dopustimuy simvol";
+		 }
+		 elseif (preg_match('/\d{6,7}/',$tel,$arr))
+		 	{
+			$asdf++;
+			return $asdf;
+			}
+			else
+				{
+				//"Proverka ne proudena";
+				}
+	}
+
+	function valruss($rus)
+	{if(preg_match('/[^а-яё]/iu',$rus,$arr))
+			{
+			
+			}else{
+					$yes++;
+				return  $yes;
+			}
+	}
+
 		
 	}
 ?>

@@ -44,4 +44,14 @@ class Controller_user extends Controller
 		$this->model->input_facebook();
 	}
 
+	function action_profile(){
+		$auth = Lib::clearRequest($_POST['auth']);
+		if ($auth) {
+			$this->model->editprofile();
+		}
+		$datauser = $this->model->getDataUser();
+		$this->view->generate('user_profile_view.php','template_view.php',$datauser);
+	}
+
+
 }?>
