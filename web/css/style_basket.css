@@ -24,12 +24,12 @@ border-radius: 15px;
 left: 780px;
 position: absolute;
 width: 40px;
-background: url(/static/img/close.png);
+background: url(/web/static/img/close.png);
 height: 40px;
 
 }
 .img_close111:hover{
-background: url(/static/img/closeh.png);
+background: url(/web/static/img/closeh.png);
 left: 780px;
 position: absolute;
 width: 40px;
@@ -75,14 +75,14 @@ border-right: 1px solid #D3D3D3;
 	margin-top: 17px;
 	width: 20px;
 	height: 19px;
-	background-image: url(/static/img/delh.png);
+	background-image: url(/web/static/img/delh.png);
 }
 .prod_nane4:hover{
 	margin-left: 15px;
 	margin-top: 17px;
 	width: 20px;
 	height: 19px;
-	background-image: url(/static/img/delp.png);
+	background-image: url(/web/static/img/delp.png);
 }
 .prod_nane4 a{
 
@@ -112,7 +112,7 @@ border-right: 1px solid #D3D3D3;
 }
 .clear_basket_b a{
 	width: 200px;
-	background: url(/static/img/delbasket.png);
+	background: url(/web/static/img/delbasket.png);
 	background-repeat: no-repeat;
 	background-position: right;
 	float: left;
@@ -122,14 +122,14 @@ border-right: 1px solid #D3D3D3;
 	color: #093a12;
 }
 .clear_basket_b a:hover{
-		background: url(/static/img/delbasketh.png);
+		background: url(/web/static/img/delbasketh.png);
 background-repeat: no-repeat;
 background-position: right;
 text-decoration: underline;
 color: red;
 }
 .basket_nuul{
-	background: url(/static/img/korzina.png);
+	background: url(/web/static/img/korzina.png);
 	background-repeat: no-repeat;
 background-position:left;
 padding: 30px;
@@ -174,21 +174,21 @@ margin-top: 5px;
 margin-left: 650px;
 }
 .zakazo{
-	background: url(/static/img/zakaz.png);
+	background: url(/web/static/img/zakaz.png);
 	margin-top: 10px;
 	margin-left: 620px;
 	width: 173px;
 	height: 50px;
 }
 .zakazo:hover{
-	background: url(/static/img/zakazh.png);
+	background: url(/web/static/img/zakazh.png);
 	margin-top: 10px;
 	margin-left: 620px;
 	width: 173px;
 	height: 50px;
 }
 .zakazo:active{
-	background: url(/static/img/zakazn.png);
+	background: url(/web/static/img/zakazn.png);
 	margin-top: 10px;
 	margin-left: 620px;
 	width: 173px;
@@ -196,15 +196,30 @@ margin-left: 650px;
 }
 
 .floba{
+	margin-left: -10px;
 	float: left;
 }
 .img_baskw{
 margin-left: 5px;
-
-
 }
 .img_bask{
 
 width: 50px;
 	border-right:1px solid #B9B9B9;
+}
+.happy{
+	margin-left: 300px;
+	width: 400px;
+	height: 100px;
+}
+.prodpok{
+width: 200px;
+padding: 20px;
+margin-bottom: 20px;
+}
+.asdasd{
+	margin-left: 37%;
+}
+.zakazof{
+	margin-left: -30px;
 }

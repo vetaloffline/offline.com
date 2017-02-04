@@ -26,6 +26,10 @@
 					<br><input type="submit" name="">
 			</form>
 		</div><?}?>
-		<?if($_SESSION['role'] == '10' && $_SESSION['auth']){?><a href="/admin/goodslist"><div class="menu_neg">Список товаров</div></a><?}?>
+		<?
+		if($_SESSION['role'] == '10' && $_SESSION['auth']){?><a href="/admin/goodslist"><div class="menu_neg">Список товаров</div></a><?}?>
+		<?if(($_SESSION['role'] == '10' || $_SESSION['role'] == '30') && $_SESSION['auth']){?><a href="/admin/orders"><div class="menu_neg">Список заказов</div></a><?}?>
+		<?if(($_SESSION['role'] == '10') && $_SESSION['auth']){?><a href="/admin/users"><div class="menu_neg">Настройки пользователей</div></a><?}?>
+	</div>
 	</div>
 </div>

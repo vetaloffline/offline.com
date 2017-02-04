@@ -10,7 +10,7 @@
 	z-index: 30;
 }
 .basket_2{
-	padding: 15px;
+padding: 15px;
 min-height:300px;
 position: absolute;
 background: white;
@@ -24,12 +24,12 @@ border-radius: 15px;
 left: 515px;
 position: absolute;
 width: 40px;
-background: url(/static/img/close.png);
+background: url(/web/static/img/close.png);
 height: 40px;
 
 }
 .img_close111:hover{
-background: url(/static/img/closeh.png);
+background: url(/web/static/img/closeh.png);
 left: 515px;
 position: absolute;
 width: 40px;
@@ -38,15 +38,13 @@ height: 40px;
 }
 .prod_bask_g{
 	margin-left: 18px;
-
 	width: 500px;
-	height: 400px;
+	height: 560px;
 }
 #nazvaoform{
 	font-size: 30px;
 	margin: auto;
-
-	width: 280px;
+	width: 310px;
 	height: 40px;
 }
 #bodyform{
@@ -56,4 +54,7 @@ height: 40px;
 }
 .formazakaza{
 	margin-top: 10px;
+}
+.inputof{
+	width: 300px;
 }

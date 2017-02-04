@@ -122,7 +122,7 @@
 					else{}
 		}
 
-	function valtel($tel)
+	static function valtel($tel)
 	{
 	if (preg_match('/[^\d]/',$tel))
 		 {
@@ -139,7 +139,7 @@
 				}
 	}
 
-	function valruss($rus)
+	static function valruss($rus)
 	{if(preg_match('/[^а-яё]/iu',$rus,$arr))
 			{
 			
@@ -148,6 +148,13 @@
 				return  $yes;
 			}
 	}
+	static function valinputcount($data){
+		if (preg_match('/^[0-9]{1,9}$/', $data)) {
+			return true;
+		}
+	}
+
+	
 
 		
 	}

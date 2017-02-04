@@ -17,10 +17,8 @@ class Route
 
 		$routes = explode('/', $_SERVER['REQUEST_URI']);
 
-		$routes_modify = explode('&',$routes[2]);
+		$routes_modify = explode('?',$routes[2]);
 		$id_product = $routes_modify;
-		
-		
 
 		if ( !empty($routes_modify[0]))
 		{
@@ -38,11 +36,15 @@ class Route
        
 			header('Location:'.$host.'admin/user/auth');
 		 } 
-		 if ($_SESSION['auth'] && $_SESSION['role'] !='10' && $action_name != 'profile') {
-			Route::ErrorPage404();
-		 }   
 
-
+		 if ($_SESSION['role'] == '30' && $_SESSION['auth'] && ($controller_name == 'order' || $controller_name == 'orders')) {
+		 	
+		 }else 
+				if ($_SESSION['role'] =='10' && $_SESSION['auth']) {
+		 				
+		 			}else{
+		 				Route::ErrorPage404();
+		 			}
 		
 		// добавляем префиксы
 		$model_name = 'Model_'.$controller_name;
@@ -50,9 +52,9 @@ class Route
 		$action_name = 'action_'.$action_name;
 
 		
-		//echo "Model: $model_name <br>";
-		//echo "Controller: $controller_name <br>";
-		//echo "Action: $action_name <br>";
+		// echo "Model: $model_name <br>";
+		// echo "Controller: $controller_name <br>";
+		// echo "Action: $action_name <br>";
 		
 
 		// подцепляем файл с классом модели (файла модели может и не быть)

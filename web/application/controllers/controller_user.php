@@ -11,7 +11,9 @@ class Controller_user extends Controller
 		$this->model = new Model_user($db);
 		$this->view = new View();
 	}
-
+	function action_index(){
+		Route::ErrorPage404();
+	}
 	function action_auth()
 	{	
 		$auth = Lib::clearRequest($_POST['auth']);
@@ -51,6 +53,12 @@ class Controller_user extends Controller
 		}
 		$datauser = $this->model->getDataUser();
 		$this->view->generate('user_profile_view.php','template_view.php',$datauser);
+	}
+
+	function action_historyorder(){
+		$data = $this->model->getordersuser();
+		$goods = $this->model->getgoodsorder($data);
+		$this->view->generate('historyorder_view.php','template_view.php',$data,$goods);
 	}
 
 

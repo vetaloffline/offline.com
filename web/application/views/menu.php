@@ -1,11 +1,13 @@
 <div class="body_left">
 	<div class="menu_g">
-		<a href="/"><div class="menu_neg">Главная</div></a>
-		<a href="/qqqq"><div class="menu_neg">Каталог товаров</div></a>
-		<a href="/about"><div class="menu_neg">О нас</div></a>
-		<a href="/contacts"><div class="menu_neg">Контакты</div></a>
+		<a href="/"><div class="menu_neg"><?=$language['home']?></div></a>
+		<a href="/katalog"><div class="menu_neg"><?=$language['catalog']?></div></a>
+		<a href="/about"><div class="menu_neg"><?=$language['about']?></div></a>
+		<a href="/contacts"><div class="menu_neg"><?=$language['contacts']?></div></a>
 		<?if($_SESSION['role'] == '10' && $_SESSION['auth']){?><a href="/admin/goodadd"><div class="menu_neg">Добавить товар</div></a><?}?>
 		<?if($_SESSION['role'] == '10' && $_SESSION['auth']){?><a href="/admin/goodslist"><div class="menu_neg">Список товаров</div></a><?}?>
+		<?if(($_SESSION['role'] == '10' || $_SESSION['role'] == '30') && $_SESSION['auth']){?><a href="/admin/orders"><div class="menu_neg">Список заказов</div></a><?}?>
+		<?if(($_SESSION['role'] == '10') && $_SESSION['auth']){?><a href="/admin/users"><div class="menu_neg">Настройки пользователей</div></a><?}?>
 		<?$uri = $_SERVER['REQUEST_URI'];?>
 		<?if($uri == "/katalog" || $route == '/goods_list'){?>
 		<div class="menu_neg">

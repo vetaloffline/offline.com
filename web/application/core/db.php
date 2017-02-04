@@ -62,7 +62,22 @@ class Db
 			return $row = mysqli_fetch_assoc($this->result);
 			
 		}
+	public function getLastid(){
+		return mysqli_insert_id($this->dbc);
+		
+	}
+	public function getlanguage($query){
+		$this->result = $this->dbc->query($query);
+			if (!$this->result)
+			{
+			var_dump($query);
+			die();}
+		return Lib::language($this->result);
+	}
+	public function real_escape_string($data){
+		return $this->dbc->real_escape_string($data);
 
+	}
 	function __destruct(){
 		$this->dbc->close();
 	}

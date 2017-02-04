@@ -8,7 +8,7 @@ margin-right:auto;
 	height: 170px;
 }
 .head_t{
-	background: url(/administrator/images/fon.jpg);
+	background: url(/web/static/img/fon.jpg);
 	background-repeat: no-repeat;
 	width: 1320px;
 	margin: auto;
@@ -19,9 +19,6 @@ margin-right:auto;
 	height: 40px;
 	width: 1200px;
 	
-}
-.btn-default{
-	width: 200px;
 }
 .reg_m{
 margin-left: 10px;
@@ -41,10 +38,10 @@ width: 215px;
 height: 63px;
 }
 .reg_r{
-	background: white;
-height:66px;
+background: white;
+height:76px;
 float: left;
-width: 160px;
+width: 180px;
 border: 1px solid #ACABAB;
 }
 .bask1{
@@ -59,17 +56,18 @@ height: 10px;
 
 	padding-left: 5px;
 	margin-top: 5px;
-	background: url(/administrator/static/img/korzi.png);
-	width: 142px;
+	background: url(/web/static/img/korzi.png);
+	width: 170px;
 	height: 30px;
 	background-repeat: no-repeat;
 	background-position: right;
 }
+
 .koltovfg{
 padding:0 8px 0 8px;
 border-radius: 20px;
-top:82px;
-left:1265px;
+top: 109px;
+left:1280px;
 background: #ffff00;
 position: absolute;
 
@@ -81,7 +79,7 @@ font-size: 18px;
 height: 40px;
 border: 1px solid #ACABAB;
 float: left;
-width: 160px;
+width: 180px;
 }
 .bask2 a{
 color:#446DB4;
@@ -511,19 +509,19 @@ width: 70px;
 	margin-left: 8px;
 	float:left;
 	display: block;
-	background: url(../images/kupitb.png);
+	background: url(/web/images/kupitb.png);
 	width: 101px;
 	height: 34px;
 }
 .idGood1:hover{
 	display: block;
-	background-image: url(../images/kupitbhover.png);
+	background-image: url(/web/images/kupitbhover.png);
 	width: 101px;
 	height: 34px;
 }
 .idGood1:active{
 	display: block;
-	background-image: url(../images/kupitbnaj.png);
+	background-image: url(/web/images/kupitbnaj.png);
 	width: 101px;
 	height: 34px;
 
@@ -532,7 +530,7 @@ width: 70px;
 padding-left: 1px;
 float:left;
 display: block;
-background-image: url(../images/vesi.png);
+background-image: url(/web/images/vesi.png);
 width: 39px;
 height: 34px;
 box-sizing: border-box;
@@ -542,7 +540,7 @@ border-right: 1px solid #B0C4DE;
 margin-left: ;
 float:left;
 display: block;
-background-image: url(../images/love.png);
+background-image: url(/web/images/love.png);
 width: 39px;
 height: 34px;
 box-sizing: border-box;
@@ -554,7 +552,7 @@ margin-top: -1px;
 border: 1px solid #FFB6C1;
 float:left;
 display: block;
-background-image: url(../images/vesi.png);
+background-image: url(/web/images/vesi.png);
 width: 39px;
 height: 34px;
 box-sizing: border-box;
@@ -566,7 +564,7 @@ margin-top: -1px;
 border: 1px solid #FFB6C1;
 float:left;
 display: block;
-background-image: url(../img/love.png);
+background-image: url(/web/images/love.png);
 width: 39px;
 height: 34px;
 box-sizing: border-box;
@@ -621,7 +619,7 @@ height: 39px;
 	margin:auto;
 }
 .body_right{
-	background: url(../img/reklama.png);
+	background: url(/web/images/reklama.png);
 	background-repeat: no-repeat;
 }
 
@@ -629,9 +627,70 @@ height: 39px;
 	width: 50px;
 	height: 50px;
 }
-.navbar{
 
-width: 50%;
-margin-left: 25%;
+.baskeet_glavvv{
+	height: 100%;
+	width: 100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+	background: black;
+	opacity: 0.7;
+	z-index: 30;
+}
+.basket_2vv{
+	padding: 15px;
+min-height:300px;
+position: absolute;
+background: white;
+width: 300px;
+z-index: 999;
+top:5%;
+right: 40%;
+border-radius: 15px;
+}
+.img_close111vv{
+	top: 8px;
+left: 280px;
+position: absolute;
+width: 40px;
+background: url(/web/static/img/close.png);
+height: 40px;
 
+}
+.img_close111vv:hover{
+	top: 8px;
+background: url(/web/static/img/closeh.png);
+left: 280px;
+position: absolute;
+width: 40px;
+background: ;
+height: 40px;
+}
+.prod_bask_gvv{
+	margin-left: 60px;
+	margin-top: 50px;
+}
+.username{
+	padding-top: 15px;
+	width: 200px;
+	margin-left: 100px;
+}
+.profileuser{
+	padding-top: 40px;
+	width: 400px;
+	height: 550px;
+	margin-left: 25%;
+	background-color: #E8E8E8;
+	border-radius: 15px;
+}
+.submituser{
+	padding-top: 20px;
+	margin-left: 100px;
+}
+.bodyorders{
+	border:1px solid;
+}
+.imglanguage{
+	width: 20px;
 }

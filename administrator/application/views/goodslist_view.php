@@ -16,7 +16,7 @@ foreach ($db as $key => $value){?>
 			<div class="good_list_img"><img src="/web/images/fotogoods/<?=$value['small_img'][0]['nameimg']?>"></div>
 			<div class="good_list_name"><?=$value['name']?></div>
 			<div class="good_list"><?=$value['price']?></div>
-			<div class="good_list_editing"><a href="/admin/editgood&?id=<?=$value['id']?>">Редактировать</a></div>
+			<div class="good_list_editing"><a href="/admin/editgood?id=<?=$value['id']?>">Редактировать</a></div>
 		</div>
 	<?}?>
 </div>

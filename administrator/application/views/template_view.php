@@ -10,8 +10,6 @@
   	<link rel="stylesheet" href="web/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
-<? 
-?>
 	<div class="html_g">
 		<header class="header_g">
 			<div class="head_t">
@@ -19,7 +17,7 @@
 				<div class="head_c2"></div>
 				<div class="head_c3">
 					<div class="register">
-						<div class="reg_le"></div><div id="uLogin" data-ulogin="display=small;theme=classic;fields=first_name,last_name,email;providers=facebook;redirect_uri=http%3A%2F%2Foffline.com//admin/user/facebook;mobilebuttons=0;"></div>
+						<div class="reg_le"></div><div id="uLogin" data-ulogin="display=small;theme=classic;fields=first_name,last_name,email;providers=facebook;redirect_uri=http%3A%2F%2Foffline.com//web/user/facebook;mobilebuttons=0;"></div>
 						<div class="reg_r"><?
 	if ($_SESSION['auth']) {?>
 	<div class="">
@@ -29,34 +27,25 @@
 		</div>
 		<div class="reg_m">
 			<?if($_SESSION['auth']){?>
-			<a href="/admin/user/profile">Профиль</a>
-			<a href="/admin/user/exit_user" class="a_exit">Выход</a>
+			<a href="/user/profile">Профиль</a>
+			<a href="/user/exit_user" class="a_exit">Выход</a>
 			<?}?>
 		</div>
-	</div><?
-	}else{
-?>
+	</div><?}else{?>
 <div class="">
-	<form action="/admin/user/auth" method="POST">
+	<form action="/web/user/auth" method="POST">
 		<div class="reg_m">
 			<input type="text" name="userNameForm" required placeholder="Введите имя" class="form_reg"  pattern="([a-z-0-9]{1,}\.){0,}[a-z-0-9]{1,}@[a-z0-9-]{1,}(\.[a-z0-9-]+){0,}\.[a-z]{2,6}"><br />
-
 		</div>
-		
 		<div class="reg_m">
 			<input type="password" name="passwd" required placeholder="Введите пароль" class="form_reg" ><br />
-
 		</div>
-
 		<div class="reg_m">
 			<input type="submit" value="Вход" name="auth">
 			<input type="hidden" name="token" value="<?=$_SESSION['token']?>">
-			<a href="/admin/user/registr">Регистрация</a>
-
+			<a href="/web/user/registr">Регистрация</a>
 		</div>
 		<script src="//ulogin.ru/js/ulogin.js"></script>
-
-	
 	</form>
 </div>
 <?}?></div><br>
@@ -66,7 +55,7 @@
 						<div class="bask2">
 							<a href="/basket" class="baska"><div class="baskkol">Корзина 
 							<?
-							$arr=unserialize($_COOKIE['add']);
+							$arr=unserialize($_COOKIE['basket']);
 						if(count($arr)!=0)
 							{?>
 								<div class="koltovfg"><?=count($arr)?></div>

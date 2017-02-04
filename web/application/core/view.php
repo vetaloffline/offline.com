@@ -20,21 +20,8 @@ class View
 					  $idfec = NULL,
 					  $imagesgood = NULL)
 	{
-		
-		/*
-		if(is_array($data)) {
-			
-			// преобразуем элементы массива в переменные
-			extract($data);
-		}
-		*/
-		
-		/*
-		динамически подключаем общий шаблон (вид),
-		внутри которого будет встраиваться вид
-		для отображения контента конкретной страницы.
-		*/
-		
+		$lang = $_SESSION['language'];
+		include '/web/'.$lang.'.php';
 		include '/web/application/views/'.$template_view;
 	}
 }

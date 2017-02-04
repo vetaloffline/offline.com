@@ -31,8 +31,8 @@ class Model_Katalog extends Model
  	 public function get_feche()
  	{
 
- 		$qquery = "SELECT * FROM `goodfeche`";
-		return $this->db->makeQuery($qquery);
+ 		$query = "SELECT * FROM `goodfeche`";
+		return $this->db->makeQuery($query);
  	}
  		 public function MakeFeche()
  	{
@@ -47,7 +47,8 @@ class Model_Katalog extends Model
 			 	  ";
 			$this->feche =  $this->db->makeQuery($query);
 			$value['feche'] = $this->feche;
-			$goodds[$key]=$value;		
+			$goodds[$key]=$value;
+
  		}
  		foreach ($goodds as $ky => $vue) {
  			$query = "SELECT * 

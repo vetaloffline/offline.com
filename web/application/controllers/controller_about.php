@@ -8,9 +8,9 @@ class Controller_about extends Controller
 		$this->view = new View();
 	}
 	
-	function action_index()
+	function action_index($db)
 	{
 				
-		$this->view->generate('about_view.php', 'template_view.php');
+		$this->view->generate('about_view.php', 'template_view.php',$db);
 	}
 }

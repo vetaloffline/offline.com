@@ -623,7 +623,7 @@ $query =                 "SELECT *
 
 
 
-        header("Location: /admin/editgood&?id=$id");}
+        header("Location: /admin/editgood?id=$id");}
    
        }  
            	

@@ -92,7 +92,7 @@ foreach ($goods as $key => $good) {
 				</div>
 				<div class="aass">
 					<div class="idGood">
-						<a href="/procces/basket/basketAdd.php?id=<?=$key?>" class="idGood1"></a>
+						<a href="/basket/basketadd?id=<?=$key?>" class="idGood1"></a>
 					</div>
 					<div class="features">
 						<div>

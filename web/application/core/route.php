@@ -17,41 +17,48 @@ class Route
 
 		$uRi = $_SERVER['REQUEST_URI'];
 
-		$query = "SELECT `real_rout`
-				  FROM `routes` 
-				  WHERE `alias_uri` = '$uRi'";
-		$alias = $db->makeQuery($query)[0]['real_rout'];
-		var_dump($uRi);
-		if ($alias) {
-			$uRi = $alias;
-		}
+		 $query = "SELECT `real_rout`
+		  		  FROM `routes` 
+		  		  WHERE `alias_uri` = '$uRi'";
+		 $alias = $db->makeQuery($query)[0]['real_rout'];
 
-;		$routes = explode('/', $uRi);
-		$routes_modify = explode('&',$routes[1]);
-		$idgood = explode('=', $routes_modify[1])[1];
+		 if ($alias) {
+		 	$uRi = $alias;
+			var_dump($uRi);
+			$explod= explode('/', $uRi);
+			$explod2 = explode('?', $explod[1]);
+			$routes[]= 0;
+			$routes[]= $explod2[0];
+			$idgood = explode('=', $explod2[1])[1];
+			$_GET['id'] = $idgood;
+		 }else{
+		$routes = explode('/', $uRi);
+		$routes_modify = explode('?',$routes[2]);
+		$idgood = explode('=', $routes_modify[1]);
 		$_GET['id'] = $idgood;
-
-		
-		if ( !empty($routes_modify[0]))
+		}
+		if ( !empty($routes[1]))
 		{
-			$controller_name = $routes_modify[0];
+			$controller_name = $routes[1];
 		}
 		// получаем имя экшена
-		if ( !empty($routes[2]) )
+		if ( !empty($routes_modify[0]) )
 		{
-			$action_name = $routes[2];
+			$action_name = $routes_modify[0];
 		}
-		
-
+		//var_dump($uRi);
 		// добавляем префиксы
 		$model_name = 'Model_'.$controller_name;
 		$controller_name = 'Controller_'.$controller_name;
 		$action_name = 'action_'.$action_name;
 
+		if (!$_SESSION['auth'] && $controller_name == 'Controller_user') {
+			Route::ErrorPage404();
+		}
 		
-		// echo "Model: $model_name <br>";
-		 //echo "Controller: $controller_name <br>";
-		// echo "Action: $action_name <br>";
+		//echo "Model: $model_name <br>";
+		//echo "Controller: $controller_name <br>";
+		//echo "Action: $action_name <br>";
 		
 
 		// подцепляем файл с классом модели (файла модели может и не быть)
@@ -79,14 +86,15 @@ class Route
 			Route::ErrorPage404();
 		}
 		
+		
 		// создаем контроллер
 		$controller = new $controller_name($db);
 		$action = $action_name;
-		
+	
 		if(method_exists($controller, $action))
 		{
 			// вызываем действие контроллера
-			$controller->$action($db);
+			$controller->$action($db,$language);
 		}
 		else
 		{
