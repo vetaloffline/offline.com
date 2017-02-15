@@ -1,7 +1,6 @@
+<div class="body_catalog">
 <?include "menu.php";
-?>
-<div class="body_center">
-<?
+if ($goods) {
 foreach ($goods as $key => $good) {
 	 ?>
 	<div class="good">
@@ -19,11 +18,11 @@ foreach ($goods as $key => $good) {
 		</div>
 		<div class="good_right">
 			<div class="good_t">
-				<div class="good_right_l">
-					<div class="good_img">
-						<div class="asdasdasdasd"><a href="<?=$good['alias']?>" alt="<?=$good['img']?>" title="<?=$good['imgGood'][3]?>"><img src="web/images/fotogoods/<?=$imagesgood[$key]['nameimg']?>" class="img_a_g"></a></div>
-					</div>
-					<span class="<?=$good["sticker"]?>"></span>
+				<span class="<?=$good["sticker"]?>"></span>
+				<div class="img_url_katalog">
+					<a href="<?=$good['alias']?>" alt="<?=$good['img']?>" title="<?=$good['imgGood'][3]?>">
+						<img src="web/images/fotogoods/<?=$imagesgood[$key]['nameimg']?>">
+					</a>
 				</div>
 				<div class="good_right_r">
 					<?	
@@ -90,17 +89,9 @@ foreach ($goods as $key => $good) {
 						</div> 
 					</div>
 				</div>
-				<div class="aass">
+				<div class="">
 					<div class="idGood">
-						<a href="/basket/basketadd?id=<?=$key?>" class="idGood1"></a>
-					</div>
-					<div class="features">
-						<div>
-							<a href="" class="love"></a>
-						</div>
-						<div>
-							<a href="" class="sravn"></a>
-						</div>
+						<a href="/basket/basketadd?id=<?=$key?>"><div class="button_buy_goods"></div></a>
 					</div>
 				</div>
 				<div class="features">
@@ -118,5 +109,5 @@ foreach ($goods as $key => $good) {
 			</div>
 		</div>
 	</div>
-<?}?>
+<?}}?>
 </div>

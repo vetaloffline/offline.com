@@ -1,14 +1,13 @@
-<?include "menu.php";
-?>
+
 <div class="body_center">
-<div class="bodyorders">
-		<div class="bodyordersspisok">
+<div class="body_orders">
+		<div class="body_orders_spisok">
 			<a href="/admin/orders" class="btn btn-info orderstatus">Новые</a>
 		</div>
-		<div>
+		<div class="body_orders_spisok">
 			<a href="/admin/orders/accept" class="btn btn-info orderstatus">Принятые</a>
 		</div>
-		<div>
+		<div class="body_orders_spisok">
 			<a href="/admin/orders/way" class="btn btn-info orderstatus">В пути</a>
 		</div>
 		<div>
@@ -44,7 +43,7 @@ foreach ($goods as $key => $value) {
         <td>
         <?if($db['status'] !== 'perform'){?>
 	        <form action="/admin/order/edit" method="POST">
-	        	<input type="text" name="count" value="<?=$value['count']?>" class="tableinput form-control">
+	        	<center><input type="text" name="count" value="<?=$value['count']?>" class="tableinput form-control form_count_order"></center>
 	        	<input type="hidden" name="idgood" value="<?=$value['id']?>">
 	        	<input type="hidden" name="idorder" value="<?=$db['id']?>">
 	        </form><?}else{?>
@@ -96,14 +95,14 @@ foreach ($goods as $key => $value) {
 	</div>
 	<div class="asdfas"></div>
 	<?if($db['status'] !== 'perform'){?>
-	<button data-toggle="collapse" data-target="#demo" class="btn btn-success addgoodorder">Добавить товар</button><?}?>
+	<button data-toggle="collapse" data-target="#demo" class="btn btn-success add_good_order">Добавить товар</button><?}?>
 	<div id="demo" class="collapse addgoodorder"><p>
 		<form action="/admin/order/goodadd" class="inputgoodaddorder" method="POST"> 
 			<label>Код товара</label>
-			<input type="text" name="idgood" class="form-control" >
+			<input type="text" name="idgood" class="form-control inpur_order_idgood" >
 			<label>Количество</label>
-			<input type="text" name="count" class="form-control"><br>
-			<input type="submit" name="" class="btn btn-primary" value="Добавить товар к заказу">
+			<input type="text" name="count" class="form-control inpur_order_idgood"><br>
+			<input type="submit" name="" class="btn btn-info" value="Добавить товар к заказу">
 			<input type="hidden" name="order" value="<?=$db['id']?>">
 		</form>
 	</div>

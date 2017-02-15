@@ -17,8 +17,6 @@ class Controller_katalog extends Controller
 	}
 	function action_index($db)
 	{	
-		$data =$db->real_escape_string('asda<>$&');
-			var_dump($data);
 		$this->colorg = $this->model->get_idcolor();
 		$this->fef = $this->model->get_idfech();
 		$this->goods = $this->model->get_goods();

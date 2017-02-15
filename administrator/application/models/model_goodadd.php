@@ -144,7 +144,7 @@ class Model_goodadd extends Model
 						WHERE `id` = '$idlastgood'";
 		$this->db->makeQuery($this->query);
 
-		$real_rout = '/product&?id='.$idlastgood;
+		$real_rout = '/product?id='.$idlastgood;
 		$this->query= "INSERT INTO `routes`(`alias_uri`, `real_rout`, `public`,`goodid`) 
  					   VALUES 			('$alias_good','$real_rout','$public','$idlastgood')";
  		$this->db->makeQuery($this->query);

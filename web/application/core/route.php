@@ -22,38 +22,41 @@ class Route
 		  		  WHERE `alias_uri` = '$uRi'";
 		 $alias = $db->makeQuery($query)[0]['real_rout'];
 
-		 if ($alias) {
-		 	$uRi = $alias;
-			var_dump($uRi);
-			$explod= explode('/', $uRi);
-			$explod2 = explode('?', $explod[1]);
-			$routes[]= 0;
-			$routes[]= $explod2[0];
-			$idgood = explode('=', $explod2[1])[1];
-			$_GET['id'] = $idgood;
-		 }else{
-		$routes = explode('/', $uRi);
-		$routes_modify = explode('?',$routes[2]);
-		$idgood = explode('=', $routes_modify[1]);
-		$_GET['id'] = $idgood;
+
+ 		if ($alias) {
+		$uRi = $alias;
+		$_GET['id'] = $id_explode[1];
 		}
-		if ( !empty($routes[1]))
+ 		$parse_uri = parse_url($uRi);
+ 		$path_uri = $parse_uri['path'];
+ 		$query_uri = $parse_uri['query'];
+ 		$explode_uri = explode('/', $path_uri);
+ 		$id_explode = explode('=', $query_uri);
+ 		if ($alias) {
+		$_GET['id'] = $id_explode[1];
+		}
+
+
+		if ( !empty($explode_uri[1]))
 		{
-			$controller_name = $routes[1];
+			$controller_name = $explode_uri[1];
 		}
 		// получаем имя экшена
-		if ( !empty($routes_modify[0]) )
+		if ( !empty($explode_uri[2]) )
 		{
-			$action_name = $routes_modify[0];
+			$action_name = $explode_uri[2];
+			
 		}
-		//var_dump($uRi);
 		// добавляем префиксы
 		$model_name = 'Model_'.$controller_name;
 		$controller_name = 'Controller_'.$controller_name;
 		$action_name = 'action_'.$action_name;
+		if (!$_SESSION['auth'] && $controller_name == 'Controller_user' && $action_name !== 'action_registr') {
 
-		if (!$_SESSION['auth'] && $controller_name == 'Controller_user') {
-			Route::ErrorPage404();
+			if (!$_SESSION['auth'] && $controller_name == 'Controller_user' && $action_name !== 'action_auth') {Route::ErrorPage404();}
+			
+
+
 		}
 		
 		//echo "Model: $model_name <br>";

@@ -1,6 +1,5 @@
 
 <link rel="stylesheet" type="text/css" href="/web/css/oform.css">
-<?include "menu.php";?>
 <div class="body_center">
 <pre></pre>
 <div class="baskeet_glav">

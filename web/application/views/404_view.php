@@ -1,4 +1,4 @@
-<?include "menu.php";?>
+
 <div class="body_center">
 <center><h1>404</h1>
 <p>

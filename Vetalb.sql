@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 04 2017 г., 07:27
+-- Время создания: Фев 15 2017 г., 13:43
 -- Версия сервера: 5.5.53
 -- Версия PHP: 5.6.29
 
@@ -2707,26 +2707,33 @@ CREATE TABLE `colors` (
 
 INSERT INTO `colors` (`idgood`, `idcolor`) VALUES
 (607, 1),
-(607, 2),
-(607, 3);
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `en`
---
-
-CREATE TABLE `en` (
-  `name` varchar(255) NOT NULL,
-  `transfer` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `en`
---
-
-INSERT INTO `en` (`name`, `transfer`) VALUES
-('home', 'home');
+(607, 4),
+(609, 1),
+(609, 2),
+(610, 2),
+(611, 2),
+(611, 3),
+(612, 1),
+(612, 2),
+(610, 1),
+(610, 4),
+(613, 3),
+(613, 2),
+(614, 2),
+(614, 4),
+(615, 2),
+(615, 3),
+(616, 1),
+(616, 2),
+(616, 3),
+(616, 4),
+(617, 1),
+(617, 2),
+(618, 2),
+(618, 4),
+(619, 1),
+(619, 2),
+(619, 4);
 
 -- --------------------------------------------------------
 
@@ -2787,7 +2794,24 @@ CREATE TABLE `goodfeche` (
 --
 
 INSERT INTO `goodfeche` (`idgood`, `idfeche`) VALUES
-(607, 2);
+(607, 2),
+(609, 2),
+(609, 3),
+(611, 1),
+(612, 1),
+(613, 2),
+(613, 1),
+(613, 3),
+(614, 1),
+(614, 2),
+(615, 2),
+(615, 3),
+(616, 2),
+(616, 3),
+(617, 1),
+(618, 1),
+(618, 2),
+(619, 2);
 
 -- --------------------------------------------------------
 
@@ -2808,12 +2832,66 @@ CREATE TABLE `goodimg` (
 --
 
 INSERT INTO `goodimg` (`id_img`, `communication`, `nameimg`, `descriptionimg`, `good_id`) VALUES
-(1104, 'main', 'da9cb72610531a03864785afec284812.jpg', 'full_img', 607),
-(1105, 'main', 'mean_imgda9cb72610531a03864785afec284812.jpg', 'mean_img', 607),
-(1106, 'main', 'small_imgda9cb72610531a03864785afec284812.jpg', 'small_img', 607),
-(1107, 'main', 'reklama_imgda9cb72610531a03864785afec284812.jpg', 'reklama_img', 607),
-(1108, 'additional_foto_1', '_additional_foto298b7fe307046554cbef697ec11eae2b.jpg', 'additional_foto', 607),
-(1109, 'additional_foto_1', 'small_img_additional_foto298b7fe307046554cbef697ec11eae2b.jpg', 'small_img', 607);
+(1138, 'main', 'caf752ee5bc2b98575837109c5af43eb.jpg', 'full_img', 614),
+(1139, 'main', 'mean_imgcaf752ee5bc2b98575837109c5af43eb.jpg', 'mean_img', 614),
+(1140, 'main', 'small_imgcaf752ee5bc2b98575837109c5af43eb.jpg', 'small_img', 614),
+(1141, 'main', 'reklama_imgcaf752ee5bc2b98575837109c5af43eb.jpg', 'reklama_img', 614),
+(1142, 'additional_foto_1', '_additional_foto03e811b1e21ec8e84d08ff72088fc591.jpg', 'additional_foto', 614),
+(1143, 'additional_foto_1', 'small_img_additional_foto03e811b1e21ec8e84d08ff72088fc591.jpg', 'small_img', 614),
+(1144, 'additional_foto_2', '_additional_fotoecf2dc359bff3898dfe7376764c0506c.jpg', 'additional_foto', 614),
+(1145, 'additional_foto_2', 'small_img_additional_fotoecf2dc359bff3898dfe7376764c0506c.jpg', 'small_img', 614),
+(1146, 'additional_foto_3', '_additional_foto86aee458437478cd5cfc4af502f2690e.jpg', 'additional_foto', 614),
+(1147, 'additional_foto_3', 'small_img_additional_foto86aee458437478cd5cfc4af502f2690e.jpg', 'small_img', 614),
+(1148, 'main', '47d16ea2ef37e04e3f6d9f7fac651317.jpg', 'full_img', 615),
+(1149, 'main', 'mean_img47d16ea2ef37e04e3f6d9f7fac651317.jpg', 'mean_img', 615),
+(1150, 'main', 'small_img47d16ea2ef37e04e3f6d9f7fac651317.jpg', 'small_img', 615),
+(1151, 'main', 'reklama_img47d16ea2ef37e04e3f6d9f7fac651317.jpg', 'reklama_img', 615),
+(1152, 'additional_foto_1', '_additional_foto7970056a5d96dfcb676888e9e2ea9e73.jpg', 'additional_foto', 615),
+(1153, 'additional_foto_1', 'small_img_additional_foto7970056a5d96dfcb676888e9e2ea9e73.jpg', 'small_img', 615),
+(1154, 'additional_foto_2', '_additional_fotocd67491bd1ee3eba53ae417e00f0e1e0.jpg', 'additional_foto', 615),
+(1155, 'additional_foto_2', 'small_img_additional_fotocd67491bd1ee3eba53ae417e00f0e1e0.jpg', 'small_img', 615),
+(1156, 'additional_foto_3', '_additional_fotobf4fbbe402f34589977ae638b60b8c2f.jpg', 'additional_foto', 615),
+(1157, 'additional_foto_3', 'small_img_additional_fotobf4fbbe402f34589977ae638b60b8c2f.jpg', 'small_img', 615),
+(1158, 'main', '56e03490a6faaef4a7c65d3566b1451d.jpg', 'full_img', 616),
+(1159, 'main', 'mean_img56e03490a6faaef4a7c65d3566b1451d.jpg', 'mean_img', 616),
+(1160, 'main', 'small_img56e03490a6faaef4a7c65d3566b1451d.jpg', 'small_img', 616),
+(1161, 'main', 'reklama_img56e03490a6faaef4a7c65d3566b1451d.jpg', 'reklama_img', 616),
+(1162, 'additional_foto_1', '_additional_foto518e1983e41543d06e4edcab65757936.jpg', 'additional_foto', 616),
+(1163, 'additional_foto_1', 'small_img_additional_foto518e1983e41543d06e4edcab65757936.jpg', 'small_img', 616),
+(1164, 'additional_foto_2', '_additional_foto0b4d6c2b140958fea53e5387c7c63106.jpg', 'additional_foto', 616),
+(1165, 'additional_foto_2', 'small_img_additional_foto0b4d6c2b140958fea53e5387c7c63106.jpg', 'small_img', 616),
+(1166, 'additional_foto_3', '_additional_foto403ab556499c6b18417b9298fea24afa.jpg', 'additional_foto', 616),
+(1167, 'additional_foto_3', 'small_img_additional_foto403ab556499c6b18417b9298fea24afa.jpg', 'small_img', 616),
+(1168, 'main', '8364f6416c83d37aa44b48a44367a702.jpg', 'full_img', 617),
+(1169, 'main', 'mean_img8364f6416c83d37aa44b48a44367a702.jpg', 'mean_img', 617),
+(1170, 'main', 'small_img8364f6416c83d37aa44b48a44367a702.jpg', 'small_img', 617),
+(1171, 'main', 'reklama_img8364f6416c83d37aa44b48a44367a702.jpg', 'reklama_img', 617),
+(1172, 'additional_foto_1', '_additional_fotof97a3a4302d8271664f529b9e1d4ca2f.jpg', 'additional_foto', 617),
+(1173, 'additional_foto_1', 'small_img_additional_fotof97a3a4302d8271664f529b9e1d4ca2f.jpg', 'small_img', 617),
+(1174, 'additional_foto_2', '_additional_foto7622835f65e0999900b3faea1d06e115.jpg', 'additional_foto', 617),
+(1175, 'additional_foto_2', 'small_img_additional_foto7622835f65e0999900b3faea1d06e115.jpg', 'small_img', 617),
+(1176, 'additional_foto_3', '_additional_fotof26d480712022712ee5d644c2cb60025.jpg', 'additional_foto', 617),
+(1177, 'additional_foto_3', 'small_img_additional_fotof26d480712022712ee5d644c2cb60025.jpg', 'small_img', 617),
+(1178, 'main', 'c7fe8d4c649433dca9df6bdede3d1b45.jpg', 'full_img', 618),
+(1179, 'main', 'mean_imgc7fe8d4c649433dca9df6bdede3d1b45.jpg', 'mean_img', 618),
+(1180, 'main', 'small_imgc7fe8d4c649433dca9df6bdede3d1b45.jpg', 'small_img', 618),
+(1181, 'main', 'reklama_imgc7fe8d4c649433dca9df6bdede3d1b45.jpg', 'reklama_img', 618),
+(1182, 'additional_foto_1', '_additional_foto0f4b62d40a5d42e924b9f58eefc2ae9d.jpg', 'additional_foto', 618),
+(1183, 'additional_foto_1', 'small_img_additional_foto0f4b62d40a5d42e924b9f58eefc2ae9d.jpg', 'small_img', 618),
+(1184, 'additional_foto_2', '_additional_foto1b94b357b466b8d8b3d023ffa2db5106.jpg', 'additional_foto', 618),
+(1185, 'additional_foto_2', 'small_img_additional_foto1b94b357b466b8d8b3d023ffa2db5106.jpg', 'small_img', 618),
+(1186, 'additional_foto_3', '_additional_fotod507c9ded94964184faae41fa96c5f96.jpg', 'additional_foto', 618),
+(1187, 'additional_foto_3', 'small_img_additional_fotod507c9ded94964184faae41fa96c5f96.jpg', 'small_img', 618),
+(1188, 'main', 'a2edb0869fb619a34fae5942de66ba36.jpg', 'full_img', 619),
+(1189, 'main', 'mean_imga2edb0869fb619a34fae5942de66ba36.jpg', 'mean_img', 619),
+(1190, 'main', 'small_imga2edb0869fb619a34fae5942de66ba36.jpg', 'small_img', 619),
+(1191, 'main', 'reklama_imga2edb0869fb619a34fae5942de66ba36.jpg', 'reklama_img', 619),
+(1192, 'additional_foto_1', '_additional_foto3f90db707112594b3751f83d26051f3f.jpg', 'additional_foto', 619),
+(1193, 'additional_foto_1', 'small_img_additional_foto3f90db707112594b3751f83d26051f3f.jpg', 'small_img', 619),
+(1194, 'additional_foto_2', '_additional_foto82147242f414bf1f7565995b3e8f01eb.jpg', 'additional_foto', 619),
+(1195, 'additional_foto_2', 'small_img_additional_foto82147242f414bf1f7565995b3e8f01eb.jpg', 'small_img', 619),
+(1196, 'additional_foto_3', '_additional_foto60d36bb0b36e3ae7a52230244f5d3c22.jpg', 'additional_foto', 619),
+(1197, 'additional_foto_3', 'small_img_additional_foto60d36bb0b36e3ae7a52230244f5d3c22.jpg', 'small_img', 619);
 
 -- --------------------------------------------------------
 
@@ -2827,8 +2905,8 @@ CREATE TABLE `goods` (
   `price` float UNSIGNED NOT NULL,
   `description` text,
   `public` tinyint(1) DEFAULT NULL,
-  `demo` char(11) NOT NULL,
-  `video` char(11) DEFAULT NULL,
+  `demo` varchar(1000) NOT NULL,
+  `video` varchar(1000) DEFAULT NULL,
   `sticker` char(11) NOT NULL,
   `availability` tinyint(11) NOT NULL,
   `oldprice` float UNSIGNED NOT NULL,
@@ -2841,7 +2919,12 @@ CREATE TABLE `goods` (
 --
 
 INSERT INTO `goods` (`id`, `name`, `price`, `description`, `public`, `demo`, `video`, `sticker`, `availability`, `oldprice`, `rating`, `alias`) VALUES
-(607, 'lenovo a6010', 3599, 'ddddddddddd ddddddddddd dddddddddd dddddddd ddddddddd ddddddd ddddd ddddd', 1, '', '2', 'stock', 1, 4000, 5, '/a6010');
+(614, 'Samsung Galaxy J7 J700H/DS Black', 2500, 'Экран (5.5&quot;, Super AMOLED Plus, 1280x720)/ Samsung Exynos 7580 (1.5 ГГц)/ основная камера: 13 Мп, фронтальная камера: 5 Мп/ RAM 1.5 ГБ/ 16 ГБ встроенной памяти + microSD/SDHC (до 128 ГБ)/ 3G/ GPS/ поддержка 2х SIM-карт (Micro-SIM)/ Android 5.1 (Lollipop) / 3000 мА*ч\r\nПодробнее: http://rozetka.com.ua/samsung_galaxy_j7_ds_black/p3818722/', 1, '', 'https://www', 'stock', 1, 0, 3, '/samsung-galaxy-j7-j700hds-black'),
+(615, 'Nous NS 5004 Gold', 5999, 'Экран (5.5&quot;, Super AMOLED Plus, 1280x720)/ Samsung Exynos 7580 (1.5 ГГц)/ основная камера: 13 Мп, фронтальная камера: 5 Мп/', 1, 'https://www.youtube.com/?gl=UA', '', 'topSales', 1, 0, 5, '/nous-ns-5004-gold'),
+(616, 'ZTE Axon 7 Grey', 5555, 'Экран (5.5&quot;, AMOLED, 2560 x 1440)/ Qualcomm Snapdragon 820 (2 х 2.2 ГГц + 2 x 1.6 ГГц)/ основная камера: 20 Мп, фронтальная камера: 8 Мп/ RAM 4 ГБ/ 64 ГБ встроенной памяти + microSD/SDHC (до 128 ГБ)/ 3G/ LTE/ GPS/ поддержка 2х SIM-карт (Nano-SIM)/ Android 6.0 (Marshmallow) / 3250 мА*ч\r\nПодробнее: http://rozetka.com.ua/zte_axon7_grey/p11891839/', 1, 'asdasd', 'sadas', '', 1, 3333, 2.5, '/zte-axon-7-grey'),
+(617, 'Samsung Galaxy A5 2016 Duos SM-A510 16Gb White', 10000, 'Экран (5.2\", Super AMOLED, 1920x1080)/ Восьмиядерный Samsung Exynos 7 (1.6 ГГц)/ основная камера: 13 Мп, фронтальная камера: 5 Мп/ RAM 2 ГБ/ 16 ГБ встроенной памяти + microSD/SDHC (до 128 ГБ)/ 3G/ LTE/ GPS/ поддержка 2х SIM-карт (Nano-SIM)/ Android 5.1.1 (Lollipop)/ 2900 мА*ч\r\nПоддерживается установка двух SIM-карт или одной SIM-карты и карты памяти. Слот для второй SIM-карты совмещен со слотом для карты памяти.', 1, '', 'sadas', 'topSales', 1, 0, 4.5, '/galaxy'),
+(618, 'LG X Power K220DS White', 4534, 'Экран (5.3&quot;, IPS, 1280х720)/ MediaTek MT6735 (1.3 ГГц)/ основная камера: 13 Мп, фронтальная камера: 5 Мп/ RAM 2 ГБ/ 16 ГБ встроенной памяти + microSD/SDHC (до 32 ГБ)/ 3G/ LTE/ GPS/ поддержка 2х SIM-карт (Nano-SIM)/ Android 6.0.1 (Marshmallow)/ 4100 мА*ч\r\nПодробнее: http://rozetka.com.ua/lg_x_power_k220ds_white/p11032851/', 1, '', 'ssss', 'superPrice', 1, 2323, 3, '/lg-x-power-k220ds-white'),
+(619, 'Lenovo K5 (A6020a40) Grey.', 1111, 'Экран (5\", IPS, 1280x720)/ Qualcomm Snapdragon 415 (1.4 ГГц)/ основная камера: 13 Мп, фронтальная камера: 5 Мп/ RAM 2 ГБ/ 16 ГБ встроенной памяти + microSD/SDHC (до 32 ГБ)/ 3G/ LTE/ GPS/ поддержка 2х SIM-карт (Micro-SIM)/ Android 5.1 (Lollipop) / 2750 мА*ч', 1, '', 'sadsdasadsdasda', '', 1, 0, 0.5, '/a6020a40');
 
 -- --------------------------------------------------------
 
@@ -2872,15 +2955,24 @@ INSERT INTO `HistoryOForders` (`id`, `id_user`, `status`, `data`, `name`, `surna
 (30, 42, 'new', '2017-02-01T14:39:06', 'Виталий', 'Симпсон', 213123123, 7198, 'cash', 'NP', 'АР Крым'),
 (31, 27, 'accept', '2017-02-01T18:38:18', 'Виталий', 'Мотылевский', 2147483647, 3599, 'cash', 'NP', 'АР Крым'),
 (32, 0, 'accept', '2017-02-01T22:24:16', 'ываываыва', 'ыаываыв', 234234234, 3599, 'bank', 'UP', 'Днепропетровская область'),
-(33, 0, 'new', '2017-02-02T09:38:31', 'вфывфы', 'фывфыв', 123123, 3599, 'cash', 'NP', 'АР Крым'),
+(33, 0, 'way', '2017-02-02T09:38:31', 'вфывфы', 'фывфыв', 123123, 0, 'cash', 'NP', 'АР Крым'),
 (34, 45, 'perform', '2017-02-02T09:41:48', 'Виталий', 'Симпсон', 123123123, 3599, 'bank', 'NP', 'Одесская область'),
 (35, 0, 'perform', '2017-02-02T10:03:57', 'фывфывфыв', 'ывыфвфвы', 213123123, 3599, 'cash', 'NP', 'Житомирская область'),
-(36, 0, 'way', '2017-02-02T10:05:17', 'выааываыва', 'ываываываыва', 2147483647, 3599, 'cash', 'NP', 'АР Крым'),
+(36, 0, 'way', '2017-02-02T10:05:17', 'выааываыва', 'ываываываыва', 2147483647, 39589, 'cash', 'NP', 'АР Крым'),
 (37, 0, 'perform', '2017-02-02T10:07:06', 'выааываыва', 'ываываываыва', 2147483647, 3599, 'cash', 'NP', 'АР Крым'),
 (38, 0, 'perform', '2017-02-02T10:07:27', 'выааываыва', 'ываываываыва', 2147483647, 3599, 'cash', 'NP', 'АР Крым'),
 (39, 0, 'way', '2017-02-02T10:07:38', 'выааываыва', 'ываываываыва', 2147483647, 3599, 'cash', 'NP', 'АР Крым'),
 (40, 0, 'accept', '2017-02-02T10:08:55', 'выааываыва', 'ываываываыва', 2147483647, 3599, 'cash', 'NP', 'АР Крым'),
-(41, 45, 'new', '2017-02-02T15:46:50', 'Виталий', 'Симпсон', 2147483647, 14396, 'cash', 'NP', 'Ивано-Франковская область');
+(41, 45, 'perform', '2017-02-02T15:46:50', 'Виталий', 'Симпсон', 2147483647, 7198, 'cash', 'NP', 'Ивано-Франковская область'),
+(42, 45, 'accept', '2017-02-08T22:20:34', 'Виталий', 'Симпсон', 4545454, 3599, 'cash', 'NP', 'АР Крым'),
+(43, 46, 'new', '2017-02-15T10:41:53', 'Вася', 'пупкин', 2147483647, 26722, 'cash', 'NP', 'АР Крым'),
+(44, 27, 'new', '2017-02-15T12:24:37', 'Виталий', 'Мотылевскийф', 2147483647, 13610, 'cash', 'NP', 'Кировоградская область'),
+(45, 45, 'new', '2017-02-15T12:28:43', 'Виталий', 'Симпсон', 313123123, 2500, 'cash', 'NP', 'АР Крым'),
+(46, 45, 'new', '2017-02-15T12:40:29', 'Виталий', 'Симпсон', 123213213, 9610, 'cash', 'NP', 'Запорожская область'),
+(47, 45, 'new', '2017-02-15T13:25:19', 'Виталий', 'Симпсон', 123131313, 41554, 'cash', 'NP', 'АР Крым'),
+(48, 45, 'new', '2017-02-15T13:25:38', 'Виталий', 'Симпсон', 2147483647, 10000, 'cash', 'NP', 'АР Крым'),
+(49, 45, 'new', '2017-02-15T13:25:57', 'Виталий', 'Симпсон', 2147483647, 10000, 'cash', 'NP', 'АР Крым'),
+(50, 45, 'perform', '2017-02-15T13:35:00', 'Виталий', 'Симпсон', 2147483647, 297715, 'cash', 'NP', 'АР Крым');
 
 -- --------------------------------------------------------
 
@@ -2905,15 +2997,30 @@ INSERT INTO `order_goods` (`id_good`, `id_order`, `count`, `price`) VALUES
 (607, 30, 2, 3599),
 (607, 31, 1, 3599),
 (607, 32, 1, 3599),
-(607, 33, 1, 3599),
 (607, 34, 1, 3599),
 (607, 35, 1, 3599),
-(607, 36, 1, 3599),
 (607, 37, 1, 3599),
 (607, 38, 1, 3599),
 (607, 39, 1, 3599),
 (607, 40, 1, 3599),
-(607, 41, 4, 3599);
+(607, 41, 2, 3599),
+(607, 42, 1, 3599),
+(607, 36, 11, 3599),
+(607, 43, 1, 3599),
+(612, 43, 1, 23123),
+(614, 44, 1, 2500),
+(616, 44, 2, 5555),
+(614, 45, 1, 2500),
+(614, 46, 1, 2500),
+(615, 46, 1, 5999),
+(619, 46, 1, 1111),
+(617, 47, 3, 10000),
+(615, 47, 1, 5999),
+(616, 47, 1, 5555),
+(617, 48, 1, 10000),
+(617, 49, 1, 10000),
+(615, 50, 33, 5999),
+(618, 50, 22, 4534);
 
 -- --------------------------------------------------------
 
@@ -2996,24 +3103,12 @@ CREATE TABLE `routes` (
 --
 
 INSERT INTO `routes` (`goodid`, `id`, `real_rout`, `public`, `alias_uri`) VALUES
-(601, 594, '/product&?id=601', 1, '/dfg434'),
-(602, 595, '/product&?id=602', 1, '/sdfsdfsdf'),
-(603, 596, '/product&?id=603', 1, '/asasas'),
-(604, 597, '/product&?id=604', 1, '/asdasd'),
-(605, 598, '/product&?id=605', 1, '/sdfsdf'),
-(606, 599, '/product&?id=606', 1, '/aaaaaa'),
-(607, 600, '/product?id=607', 1, '/a6010');
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `ru`
---
-
-CREATE TABLE `ru` (
-  `name` varchar(255) NOT NULL,
-  `transfer` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+(614, 606, '/product?id=614', 1, '/samsung-galaxy-j7-j700hds-black'),
+(615, 607, '/product?id=615', 1, '/nous-ns-5004-gold'),
+(616, 608, '/product?id=616', 1, '/zte-axon-7-grey'),
+(617, 609, '/product?id=617', 1, '/galaxy'),
+(618, 610, '/product?id=618', 1, '/lg-x-power-k220ds-white'),
+(619, 611, '/product?id=619', 1, '/a6020a40');
 
 -- --------------------------------------------------------
 
@@ -3035,17 +3130,6 @@ INSERT INTO `status` (`name`, `russname`) VALUES
 ('way', 'В пути'),
 ('perform', 'Выполнен'),
 ('accept', 'Принят');
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `ua`
---
-
-CREATE TABLE `ua` (
-  `name` varchar(255) NOT NULL,
-  `transfer` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -3073,11 +3157,12 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`name`, `surname`, `patronymic`, `phone`, `email`, `password`, `id`, `avatar_mean`, `avatar_full`, `login`, `role`, `social`) VALUES
-('Виталий', 'Мотылевский', 'Сергеевич', 9934534534, '1990vetalb1990@gmail.com', '$2y$10$wGOyi5F4F6PenWiFBWc5FOAbE3/XjwJWLmF/dveaRAvDjdwjotDcW', 27, 'ava_full.jpg', 'ava_mean.jpg', '1990vetalb1990@gmail.com', 10, 0),
+('Виталий', 'Мотылевскийф', 'Сергеевич', 9934532321, '1990vetalb1990@gmail.com', '$2y$10$wGOyi5F4F6PenWiFBWc5FOAbE3/XjwJWLmF/dveaRAvDjdwjotDcW', 27, 'ava_full.jpg', 'ava_mean.jpg', '1990vetalb1990@gmail.com', 10, 0),
 ('ваывавыа', 'ывыва', 'ываыва', 234324234, 'sdfsdf@asd.asd', '$2y$10$qn1jEaC4hi..7TnBIzT/sOu5okp7B3Low5PJylZEnQ5DczQSt0RLa', 40, 'ava_full.jpg', 'ava_mean.jpg', 'sdfsdf@asd.asd', 20, 0),
 ('', '', '', NULL, 'qqqq@qq.qq', '$2y$10$PJR/NAVvcnggwsVrefTLs.7vOvuz/HOrYUvhhW3oH2uC7SDL1xX1C', 43, 'ava_full.jpg', 'ava_mean.jpg', 'qqqq@qq.qq', 30, 0),
 ('', '', '', NULL, 'sdsdf@asd.asd', '$2y$10$nK3bNsM7I7TCqy7Sy5xeyO5tfYCxV6fJx7RrC2Qk2OfdsvTZ0UrAy', 44, 'ava_full.jpg', 'ava_mean.jpg', 'sdsdf@asd.asd', 20, 0),
-('Виталий', 'Симпсон', '', NULL, '1990vetalb1990@gmail.com', '', 45, '', '', '207183329738622', 20, 1);
+('Виталий', 'Симпсон', '', NULL, '1990vetalb1990@gmail.com', '', 45, '', '', '207183329738622', 20, 1),
+('Вася', '', '', 0, '213sadas@asdas.asd', '$2y$10$CP3/f2d8zdGyjLSdBDXmc.KSWAORXSdmpA/uKRl8Oa7LbQQEzELpW', 46, 'ava_full.jpg', 'ava_mean.jpg', '213sadas@asdas.asd', 20, 0);
 
 --
 -- Индексы сохранённых таблиц
@@ -3188,17 +3273,17 @@ ALTER TABLE `goodcolors`
 -- AUTO_INCREMENT для таблицы `goodimg`
 --
 ALTER TABLE `goodimg`
-  MODIFY `id_img` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1110;
+  MODIFY `id_img` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1198;
 --
 -- AUTO_INCREMENT для таблицы `goods`
 --
 ALTER TABLE `goods`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=608;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=620;
 --
 -- AUTO_INCREMENT для таблицы `HistoryOForders`
 --
 ALTER TABLE `HistoryOForders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 --
 -- AUTO_INCREMENT для таблицы `region`
 --
@@ -3208,12 +3293,12 @@ ALTER TABLE `region`
 -- AUTO_INCREMENT для таблицы `routes`
 --
 ALTER TABLE `routes`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=601;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=612;
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

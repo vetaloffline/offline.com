@@ -1,21 +1,22 @@
-<?include "menu.php";?>
+
 <div class="body_center">
-	<div class="bodyorders">
-		<div class="bodyordersspisok">
+	<h2>Заказы</h2>
+	<div class="body_orders">
+		<div class="body_orders_spisok">
 			<a href="/admin/orders" class="btn btn-info orderstatus">Новые</a>
 		</div>
-		<div>
+		<div class="body_orders_spisok">
 			<a href="/admin/orders/accept" class="btn btn-info orderstatus">Принятые</a>
 		</div>
-		<div>
+		<div class="body_orders_spisok">
 			<a href="/admin/orders/way" class="btn btn-info orderstatus">В пути</a>
-		</div>
+		</div >
 		<div>
 			<a href="/admin/orders/perform" class="btn btn-info orderstatus">Выполненые</a>
 		</div>
 	</div>
-	<div class="bodylistorders">
-		<table class="table table-bordered">
+	<div class="">
+		<table class="table table-striped body_list_orders">
 			<thead>
 	     	 <tr>
 	       	 <th><center>Номер заказа</center></th>

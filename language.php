@@ -1,0 +1,43 @@
+<?
+$language['en'] = [
+	'home' => 'Home',
+	'catalog' => 'Catalog',
+	'about' => 'About',
+	'contacts' => 'Contacts',
+	'basket' => 'Basket',
+	'empty' => 'is empty',
+	'language' => 'language',
+	'empty_cart'=>'Cart is empty',
+	'authorization' => 'Authorization',
+	'registration'=>'Registration',
+	'Authorize_using'=>'Authorize using:',
+	'to_come_in'=>'To come in',
+];
+$language['ua'] = [
+	'home' => 'Головна',
+	'catalog' => 'Каталог товарів',
+	'about' => 'Про нас',
+	'contacts' => 'Контакти',
+	'basket' => 'Кошик',
+	'empty' => 'порожній',
+	'language' => 'Мова',
+	'empty_cart'=>'Кошик порожній',
+	'authorization' => 'Авторизація',
+	'registration'=>'Реєстрація',
+	'Authorize_using'=>'Авторизуватися за допомогою:',
+	'to_come_in'=>'Увійти',
+];
+$language['ru'] = [
+	'home' => 'Главная',
+	'catalog' => 'Каталог товаров',
+	'about' => 'О нас',
+	'contacts' => 'Контакты',
+	'basket' => 'Корзина',
+	'empty' => 'пустая',
+	'language' => 'Язык',
+	'empty_cart'=>'Корзина пустая',
+	'authorization' => 'Авторизация',
+	'registration'=>'Регистрация',
+	'Authorize_using'=>'Авторизироваться с помощью:',
+	'to_come_in'=>'Войти',
+];

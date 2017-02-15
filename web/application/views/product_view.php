@@ -1,5 +1,6 @@
 <?
 $meanimg = $idcolor[0]['nameimg'];
+$img = explode('mean_img', $meanimg)[1];
 ?>
 <link rel="stylesheet" type="text/css" href="web/css/style_p.css">
 <div class="body_center">
@@ -20,10 +21,12 @@ $meanimg = $idcolor[0]['nameimg'];
 	<div class="menu_cen_p">
 		<div class="img_pro_b">
 				<?
-				 foreach ($fef as $key => $value) {?>
+				 foreach ($fef as $key => $value) {
+				 	$img_small = explode('small_img_additional_foto', $value['nameimg'])[1];
+				 	$img_small = '_additional_foto'.$img_small;?>
 						<div class="img_b_b">
 							<div class="img_b_b1">
-								<a href=""><img src="web/images/fotogoods/<?=$value['nameimg']?>"  class="sssaaasd"></a>
+								<a href="<?if($img_small !== '_additional_foto'){?>web/images/fotogoods/<? echo $img_small;}else{echo '/web/images/fotogoods/'."$img";}?>"><img src="web/images/fotogoods/<?=$value['nameimg']?>"  class="sssaaasd"></a>
 							</div>
 						</div>
 					<?}?>
@@ -31,7 +34,7 @@ $meanimg = $idcolor[0]['nameimg'];
 			<div class="img_pro_a">
 					<div class="image_p">
 						<div class="good_img">
-							<img src="web/images/fotogoods/<?=$meanimg?>" class="img_a_g">
+							<a href="web/images/fotogoods/<?=$img?>"><img src="web/images/fotogoods/<?=$meanimg?>" class="img_a_g"></a>
 						</div>
 					</div>
 					<span class="<?=$goods["sticker"]?>"></span>
@@ -50,8 +53,8 @@ $meanimg = $idcolor[0]['nameimg'];
 								<?}?>
 							</div>
 					</div>
-				<div class="idGood">
-					<a href="/procces/basket/basketAdd.php?id=<?=$id?>" class="idGood1"></a>
+				<div class="button_buy_goods_body">
+					<a href="/basket/basketadd?id=<?=$_GET['id']?>"><div class="button_buy_goods"></div></a>
 				</div>
 			</div>
 			<div class="dopol">
@@ -64,34 +67,7 @@ $meanimg = $idcolor[0]['nameimg'];
 				</div>
 				<?}?>
 				</div>
-				<div class="block12">
-					<div class="oplata"></div>
-					<div class="srav_ves12">
-						<div class="verh_p">
-							<div class="levo_p">
-								<div>
-									<a href="" class="love"></a>
-								</div>
-							</div>
-							<div class="pravo_p">
-								<div>
-									<a href="" class="sravn"></a>
-								</div>
-							</div>
-						</div>
-						<div class="niz_p">
-							<div class="levo_p">
-								<div></div>
-							</div>
-							<div class="pravo_p">
-								<div></div>
-							</div>
-						</div>
-					</div>
-				</div>
 				<div class="opisanie_p">
-
-
 				<div class="otz_opis">
 					<div class="reiting">
 						<div class="reiting1">

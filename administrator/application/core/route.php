@@ -29,13 +29,14 @@ class Route
 		{
 			$action_name = $routes[3];
 		}
-		//var_dump($_SESSION);
+		
 	
 		if (!$_SESSION['auth'] && $controller_name != 'user' && $action_name != 'auth') {
 			$host = 'http://'.$_SERVER['HTTP_HOST'].'/';
-       
-			header('Location:'.$host.'admin/user/auth');
-		 } 
+       		
+			header('Location:'.$host.'user/auth');
+			die();
+		 }
 
 		 if ($_SESSION['role'] == '30' && $_SESSION['auth'] && ($controller_name == 'order' || $controller_name == 'orders')) {
 		 	

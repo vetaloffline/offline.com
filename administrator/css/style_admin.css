@@ -1,0 +1,396 @@
+#body_home{
+	
+	
+}
+#body_head{
+
+}
+#body_body{
+
+}
+#center_body{
+
+width: 1000px;
+margin: auto;
+}
+ .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f2f3f4;
+      height: 100%;
+    }
+
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 10px;
+      }
+      .row.content {height: auto;} 
+    }
+.li_menu_admin{
+	width:195px;
+	background-color:#292f33;	
+}
+.li_menu_admin a{
+	color: gold;
+}
+.nav>li>a:hover{
+	background-color:#050505;	
+}
+.table-striped{
+	width: 600px;
+}
+.body_orders_spisok{
+	float: left;
+	
+}
+.bodyorders a{
+	margin-top: 10px;
+	margin-left: 20px;
+	width: 150px;
+}
+.bodyorders{
+	margin-left: 90px;
+}
+.users_table_admin{
+	margin-top: 20px;
+}
+.orderstatus{
+
+	background-color: #3e5970;
+}
+.orderstatus:hover{
+	background-color: #0e2940;
+}
+.orderstatus:active{
+	background-color: #0e2940;
+}
+.btn-info{
+	border-color:black;
+}
+.btn-info.active.focus, 
+.btn-info.active:focus, 
+.btn-info.active:hover, 
+.btn-info:active.focus, 
+.btn-info:active:focus, 
+.btn-info:active:hover
+{
+	background-color: black;
+	border-color:black;
+}
+.btn-primary{
+	
+	background-color: #3e464d;
+	color: gold;
+}
+.btn-primary:hover{
+	background-color:#1c1e1f;
+	border-color: black;
+}
+
+.btn-primary:focus{
+	background-color:#1c1e1f;
+	border-color: black;
+}
+.btn-group-vertical>.btn, 
+.btn-group-vertical>.btn-group, 
+.btn-group-vertical>.btn-group>.btn{
+	width: 220px;
+	text-align: left;
+	border-color: black;
+
+}
+.btn-primary.active.focus, 
+.btn-primary.active:focus, 
+.btn-primary.active:hover, 
+.btn-primary:active.focus, 
+.btn-primary:active:focus, 
+.btn-primary:active:hover, 
+.open>.dropdown-toggle.btn-primary.focus, 
+.open>.dropdown-toggle.btn-primary:focus, 
+.open>.dropdown-toggle.btn-primary:hover{
+	background-color: #1c1e1f;
+	border-color: black;
+}
+.btn.active.focus, 
+.btn.active:focus, 
+.btn.focus, 
+.btn:active.focus, 
+.btn:active:focus, 
+.btn:focus {
+    outline: 15px; 
+    outline-offset: -2px; 
+
+}
+.menu_navbar li{
+width: 250px;
+margin-bottom: -2px;
+border-bottom: 1px solid #505457;
+}
+.nav{
+margin-left: -15px;
+}
+.nav>li>a:focus, .nav>li>a:hover{
+	background-color: black;
+}
+.body_orders a{
+width: 110px;
+margin-left: 15px;
+}
+.body_orders{
+	margin-left: 100px;
+	margin-bottom: 15px;
+	margin-top: 10px;
+
+}
+.form_count_order{
+width: 100px;
+text-align: center;
+}
+
+#sel1{
+	margin-top: 10px;
+	width: 150px;
+	margin-bottom: 10px;
+}
+.inpur_order_idgood{
+	width: 200px;
+}
+.btn-info{
+	border-color: #4281b8;
+	background-color: #4f6980;
+}
+.btn-info:focus{
+	background-color: #4487c2;
+	border-color: #611df2;
+}
+.add_good_order{
+	background-color:#645fe3;
+	border-color: #611df2;
+}
+.btn-success.active.focus,
+.btn-success.active:focus,
+.btn-success.active:hover,
+.btn-success:active.focus, 
+.btn-success:active:focus, 
+.btn-success:active:hover,
+.open>.dropdown-toggle.btn-success.focus, 
+.open>.dropdown-toggle.btn-success:focus, 
+.open>.dropdown-toggle.btn-success:hover{
+	background-color: #645fe3 ;
+	border-color: #611df2;
+}
+.add_good_order:hover{
+	background-color:#645fe3 ;
+	border-color: #611df2;
+}
+.btn-success.focus, 
+.btn-success:focus{
+	background-color:#645fe3 ;
+	border-color: #611df2;
+}
+.table_lists{
+	width: 700px;
+}
+.input_role_admin{
+	width: 160px;
+}
+.body_list_orders{
+	width: 700px;
+}
+.input_good_add_name{
+	width: 300px;
+}
+.firsr_block_form{
+
+	width: 700px;
+	height: 320px;
+}
+.first_block_in_1{
+
+float: left;
+width: 300px;
+}
+.first_block_in_2{
+	margin-right: 50px;
+	float: right;
+}
+.input_img_admin{
+	margin-top: 15px;
+}
+.checkboxx {
+  vertical-align: top;
+  margin: 0 3px 0 0;
+  width: 17px;
+  height: 17px;
+}
+/* Cначала обозначаем стили для IE8 и более старых версий
+т.е. здесь мы немного облагораживаем стандартный чекбокс. */
+.checkboxx {
+  vertical-align: top;
+  margin: 0 3px 0 0;
+  width: 17px;
+  height: 17px;
+}
+/* Это для всех браузеров, кроме совсем старых, которые не поддерживают
+селекторы с плюсом. Показываем, что label кликабелен. */
+.checkboxx + label {
+  cursor: pointer;
+}
+
+/* Далее идет оформление чекбокса в современных браузерах, а также IE9 и выше.
+Благодаря тому, что старые браузеры не поддерживают селекторы :not и :checked,
+в них все нижеследующие стили не сработают. */
+
+/* Прячем оригинальный чекбокс. */
+.checkboxx:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.checkboxx:not(checked) + label {
+  position: relative; /* будем позиционировать псевдочекбокс относительно label */
+  padding: 0 0 0 60px; /* оставляем слева от label место под псевдочекбокс */
+}
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.checkboxx:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 50px;
+  height: 26px;
+  border-radius: 13px;
+  background: #CDD1DA;
+  box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+}
+/* Оформление второй части чекбокса в выключенном состоянии (переключатель). */
+.checkboxx:not(checked) + label:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0 2px 5px rgba(0,0,0,.3);
+  transition: all .2s; /* анимация, чтобы чекбокс переключался плавно */
+}
+.check_colors_black:not(checked) + label:after{
+	background: black;
+}
+.check_colors_white:not(checked) + label:after{
+	background: white;
+}
+.check_colors_yellow:not(checked) + label:after{
+	background: gold;
+}
+.check_colors_red:not(checked) + label:after{
+	background: red;
+}
+
+/* Меняем фон чекбокса, когда он включен. */
+.checkboxx:checked + label:before {
+ 
+}
+.check_colors_black:checked + label:before {
+  background: black;
+}
+.check_colors_white:checked + label:before {
+  background: white;
+}
+.check_colors_yellow:checked + label:before {
+  background: yellow;
+}
+.check_colors_red:checked + label:before {
+  background: red;
+}
+/* Сдвигаем переключатель чекбокса, когда он включен. */
+.checkboxx:checked + label:after {
+  left: 26px;
+  background-color: white;
+}
+/* Показываем получение фокуса. */
+.checkboxx:focus + label:before {
+  box-shadow: 0 0 0 3px rgba(255,255,0,.5);
+}
+#red b{
+	font-size: 20px;
+}
+#yellow b{
+	font-size: 20px;
+}
+#white b{
+	font-size: 20px;
+}
+#black b{
+	font-size: 20px;
+}
+.input_select_stick{
+	width: 200px;
+}
+.second_block_form{
+	width: 700px;
+	height: 280px;
+}
+.second_block_in_1{
+	
+	float: left;
+}
+.second_block_in_2{
+
+	float: right;
+	margin-right: 135px;
+}
+.colors_forms{
+	margin-top: 10px;
+}
+.checkbox_inpu_fech:not(checked){
+	width: 20px;
+	height: 20px;
+}
+.fech_div{
+	
+	float: left;
+	margin-right: 20px;
+}
+.fech_block_main{
+	height: 70px;
+}
+#public_chek:not(checked){
+width: 20px;
+height: 20px;
+}
+#public_checkbox{
+
+	margin-left: 10px;
+	font-size: 20px;
+}
+
+#block_img_edit{
+	width: 350px;
+	float: right;
+}
+#edit_good_list{
+	width: 350px;
+	
+	float: left;
+	height: 1000px;
+}
+#colors_table_check{
+	
+	width: 250px;
+	height: 300px;
+	float: right;
+	margin-right: 100px;
+}
+#feck_block_edit{
+	height: 100px;
+}
+#asdsad textarea{
+	height: 150px;
+	margin-top: 10px;
+}

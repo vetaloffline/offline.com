@@ -1,35 +1,52 @@
 <div class="body_left">
 	<div class="menu_g">
-		<a href="/"><div class="menu_neg"><?=$language['home']?></div></a>
-		<a href="/katalog"><div class="menu_neg"><?=$language['catalog']?></div></a>
-		<a href="/about"><div class="menu_neg"><?=$language['about']?></div></a>
-		<a href="/contacts"><div class="menu_neg"><?=$language['contacts']?></div></a>
-		<?if($_SESSION['role'] == '10' && $_SESSION['auth']){?><a href="/admin/goodadd"><div class="menu_neg">Добавить товар</div></a><?}?>
-		<?if($_SESSION['role'] == '10' && $_SESSION['auth']){?><a href="/admin/goodslist"><div class="menu_neg">Список товаров</div></a><?}?>
-		<?if(($_SESSION['role'] == '10' || $_SESSION['role'] == '30') && $_SESSION['auth']){?><a href="/admin/orders"><div class="menu_neg">Список заказов</div></a><?}?>
-		<?if(($_SESSION['role'] == '10') && $_SESSION['auth']){?><a href="/admin/users"><div class="menu_neg">Настройки пользователей</div></a><?}?>
-		<?$uri = $_SERVER['REQUEST_URI'];?>
-		<?if($uri == "/katalog" || $route == '/goods_list'){?>
 		<div class="menu_neg">
-			<form action="">
-				<select name="sel"  onchange="this.form.submit()">
-					<option value="reting"  <?if($select == "reting"){echo 'selected';}?>		>По рейтингу</option>
-					<option value="az"  	<?if($select == "az"){echo 'selected';}?> 		        >От А-я</option>
-		  			<option value="za"  	<?if($select == "za"){echo 'selected';}?>   	   	    >От Я-а</option>
-		  			<option value="maxmin"  <?if($select == "maxmin"){echo 'selected';}?> >От большего 10-1</option>
-		  			<option value="minmax"  <?if($select == "minmax"){echo 'selected';}?>  >От меншего 1-10</option>
-		  		<!-- 	<input type="submit" name=""> -->
-				</select>
-					<br>100-0<input type="radio" name="price" value="100_0" <?if($_GET['price'] == '100_0'){echo 'checked';}?>>
-					0-100<input type="radio" name="price" value="0_100" <?if($_GET['price'] == '0_100'){echo 'checked';}?>>
-					<input type="hidden" name="route" value="katalog" >
-					<br>samsung<input type="checkbox" name="brand0" value="samsung" <?if($_GET['brand0'] == 'samsung'){echo 'checked';}?>>
-					<br>apple<input type="checkbox" name="brand1" value="apple" <?if($_GET['brand1'] == 'apple'){echo 'checked';}?>>
-					<br>nokia<input type="checkbox" name="brand2" value="nokia" <?if($_GET['brand2'] == 'nokia'){echo 'checked';}?>>
-					<br><input type="submit" name="">
-			</form>
-			
-		</div><?}?>
+			<form action="/katalog">
+				<select name="sel" id='testselect' onchange="this.form.submit()">
+					<option value="reting"  <?if($_GET['sel'] == "reting"){echo 'selected';}?>		>По рейтингу</option>
+					<option value="az"  	<?if($_GET['sel'] == "az"){echo 'selected';}?> 		        >От А-я</option>
+		  			<option value="za"  	<?if($_GET['sel'] == "za"){echo 'selected';}?>   	   	    >От Я-а</option>
+		  			<option value="maxmin"  <?if($_GET['sel'] == "maxmin"){echo 'selected';}?> >От большего 10-1</option>
+		  			<option value="minmax"  <?if($_GET['sel'] == "minmax"){echo 'selected';}?>  >От меншего 1-10</option>
+				</select><?$a = 1;?>
+
+
+				
+<!-- 
+
+				<script type="text/javascript">
+					function funcBefore (){
+						$("#information").text('Ожидание данных...');
+						$("#loader").show();
+					}
+					function funcSuccess (data){
+						$("#information").text(data);
+						$("#loader").hide();
+						
+					}
+				$(document).ready (function (){
+					$('#testselect').change(function(){
+						// $.get('/katalog',{sel: "name"}, function(data){
+						// 	//alert(<?=$a?>);
+						// });
+						var em = '?em=123';
+						$.ajax({
+							url: "/katalog"+em, //где будет обрабатываться
+							type: "GET",
+							success: function(html){
+							$("#sadasda").html('');
+							 for(value in html) {
+					             $("#sadasda").append(
+					                        
+					                      );
+					                }
+							}
+						});
+					});
+
+				});
+
+</script> -->
+		</div>
 	</div>
 </div>
-

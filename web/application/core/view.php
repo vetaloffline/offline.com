@@ -2,14 +2,6 @@
 
 class View
 {
-	
-	//public $template_view; // здесь можно указать общий вид по умолчанию.
-	
-	/*
-	$content_file - виды отображающие контент страниц;
-	$template_file - общий для всех страниц шаблон;
-	$data - массив, содержащий элементы контента страницы. Обычно заполняется в модели.
-	*/
 	function generate($content_view, 
 					  $template_view, 
 					  $db = NULL,
@@ -21,7 +13,9 @@ class View
 					  $imagesgood = NULL)
 	{
 		$lang = $_SESSION['language'];
-		include '/web/'.$lang.'.php';
+		include '/language.php';
+		$language = $language[$lang];
+		$cart = unserialize($_COOKIE['basket']);
 		include '/web/application/views/'.$template_view;
 	}
 }

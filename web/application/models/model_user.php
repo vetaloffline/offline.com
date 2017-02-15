@@ -9,7 +9,6 @@ class Model_user extends Model{
 		$host= $_SERVER['REMOTE_HOST'];
 		$ip= $_SERVER['REMOTE_ADDR'];
 
-
 		$query = "SELECT `login`
 				  FROM `users` 
 				  WHERE `login` = '$login'";
@@ -191,8 +190,7 @@ class Model_user extends Model{
 
 	function getgoodsorder($data){
 		if ($data) {
-			
-		
+
 		foreach ($data as $key => $value) {
 			foreach ($value as $k => $v) {
 				$id = $v['id_good'];
@@ -202,8 +200,8 @@ class Model_user extends Model{
 						  WHERE id = '$id'";
 				$good = $this->db->makeQuery($query)[0];
 				$goods[$good['id']]=$good;}
-			}return $goods;
-		}
+			}
+		}return $goods;
 	}}
 
 

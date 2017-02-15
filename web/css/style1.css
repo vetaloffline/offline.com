@@ -1,24 +1,21 @@
 .html_g{
 margin-right:auto;
 	box-sizing: border-box;
-	width:1333px;
+	
 }
-.header_g{
-	box-sizing: border-box;
-	height: 170px;
-}
+
 .head_t{
-	background: url(/web/static/img/fon.jpg);
-	background-repeat: no-repeat;
+	
+	
 	width: 1320px;
 	margin: auto;
 	height: 105px;
 	
 }
-.head_b{
-	height: 40px;
+.body_catalog{
 	width: 1200px;
 	
+	margin: auto;
 }
 .reg_m{
 margin-left: 10px;
@@ -148,6 +145,7 @@ width: 400px;
 
 .body_g{
 	box-sizing: border-box;
+	
 }
 .body_left{
 	box-sizing: border-box;
@@ -180,10 +178,15 @@ a .menu_neg:hover{
 
 	box-sizing: border-box;
 	width: 900px;
+	margin: auto;
+
+}
+.dropdown-menu{
+	z-index: 1200;
 	float: left;
 }
 .body_right{
-
+	
 	box-sizing: border-box;
 	width: 220px;
 	height: 1000px;
@@ -246,7 +249,7 @@ a .menu_neg:hover{
 	display: block;
 	color:#3992D2;
 	text-decoration: none;
-	font-size: 12px;
+	font-size: 10px;
 	padding-top: 20px;
 }
 .video_a{
@@ -255,13 +258,14 @@ a .menu_neg:hover{
 	margin-top: 5px;
 	width:65px;
 	height: 16px;
+	margin-bottom: 20px;
 	background: url(/web/images/video.png);
 	background-repeat: no-repeat;
 	text-align:center;
 	display: block;
 	text-decoration: none;
 	color:#3992D2;
-	font-size: 12px;
+	font-size: 10px;
 	padding-top: 20px;
 }
 .demo_a:hover{
@@ -275,7 +279,7 @@ a .menu_neg:hover{
 	display: block;
 	color:red;
 	text-decoration: underline;
-	font-size: 12px;
+	font-size: 10px;
 	padding-top: 20px;
 }
 .video_a:hover{
@@ -289,17 +293,18 @@ a .menu_neg:hover{
 	display: block;
 	text-decoration: underline;
 	color:red;
-	font-size: 12px;
+	font-size: 10px;
 	padding-top: 20px;
 }
 .good_right_l{
+	z-index: 100;
 	width: 157px;
 	height: 100%;
 	float:left;
 
 }
 .good_right_r{
-	padding-top: 8px;
+	
 	width: 25px;
 	float:right;
 	
@@ -316,44 +321,43 @@ a .menu_neg:hover{
 ;
 }
 .superPrice{
-		
+
 display: block; 
 width:89px ;
 height: 35px;
 background: url(/web/images/superp.png);
 background-repeat: no-repeat;
-position: relative;
-bottom: 203px;
+position: absolute;
+
 }
 .topSales{
-	
 display: block; 
 width:95px ;
 height: 35px;
 background: url(/web/images/topprod.png);
 background-repeat: no-repeat;
-position: relative;
-bottom: 203px;
+position: absolute;
+
 
 }
-.stock{
-		
+.stock{		
 display: block; 
 width:64px ;
 height: 35px;
 background: url(/web/images/akcia.png);
 background-repeat: no-repeat;
-position: relative;
-bottom: 203px;
+position: absolute;
 }
-.img_a_g{
-margin-top: 5px;
+.img_url_katalog{
+	width: 150px;
+	float: left;
 }
-
-.asdasdasdasd{
+.image_foto_url{
+z-index: 500;
 width: 120px;
 margin: auto;
 }
+
 .red{	
 background: url(/web/images/red.png);
 display: block;
@@ -504,75 +508,9 @@ width: 70px;
 .aass{
 	height: 43px;
 }
-.idGood1{
-		
-	margin-left: 8px;
-	float:left;
-	display: block;
-	background: url(/web/images/kupitb.png);
-	width: 101px;
-	height: 34px;
-}
-.idGood1:hover{
-	display: block;
-	background-image: url(/web/images/kupitbhover.png);
-	width: 101px;
-	height: 34px;
-}
-.idGood1:active{
-	display: block;
-	background-image: url(/web/images/kupitbnaj.png);
-	width: 101px;
-	height: 34px;
-
-}
-.sravn{
-padding-left: 1px;
-float:left;
-display: block;
-background-image: url(/web/images/vesi.png);
-width: 39px;
-height: 34px;
-box-sizing: border-box;
-}
-.love{
-border-right: 1px solid #B0C4DE;
-margin-left: ;
-float:left;
-display: block;
-background-image: url(/web/images/love.png);
-width: 39px;
-height: 34px;
-box-sizing: border-box;
-margin-left: 2px;
-}
-.sravn:hover{
-margin-left: -1px;
-margin-top: -1px;
-border: 1px solid #FFB6C1;
-float:left;
-display: block;
-background-image: url(/web/images/vesi.png);
-width: 39px;
-height: 34px;
-box-sizing: border-box;
-
-}
-.love:hover{
-margin-right: 1px;
-margin-top: -1px;
-border: 1px solid #FFB6C1;
-float:left;
-display: block;
-background-image: url(/web/images/love.png);
-width: 39px;
-height: 34px;
-box-sizing: border-box;
-margin-left: 1px;
 }
 .features1{
 	margin-left: 2px;
-margin-top: 8px;
 	margin-right: 5px;
 	float: left;
 }
@@ -615,7 +553,7 @@ height: 39px;
 }
 /*-------------------------------------------------------MAIN-----------------------------------------------------------------*/
 #main_g{
-	width: 715px;
+width: 660px;
 	margin:auto;
 }
 .body_right{
@@ -638,20 +576,21 @@ height: 39px;
 	opacity: 0.7;
 	z-index: 30;
 }
+.basket_2{
+	width: 600px;
+}
 .basket_2vv{
-	padding: 15px;
-min-height:300px;
+width: 400px;
 position: absolute;
 background: white;
-width: 300px;
 z-index: 999;
 top:5%;
-right: 40%;
+margin-left:250px;
 border-radius: 15px;
 }
 .img_close111vv{
 	top: 8px;
-left: 280px;
+left: 340px;
 position: absolute;
 width: 40px;
 background: url(/web/static/img/close.png);
@@ -659,17 +598,19 @@ height: 40px;
 
 }
 .img_close111vv:hover{
-	top: 8px;
+top: 8px;
 background: url(/web/static/img/closeh.png);
-left: 280px;
+left: 340px;
 position: absolute;
 width: 40px;
 background: ;
 height: 40px;
 }
 .prod_bask_gvv{
+	width: 250px;
+	
 	margin-left: 60px;
-	margin-top: 50px;
+	margin-top: 0px;
 }
 .username{
 	padding-top: 15px;
@@ -693,4 +634,108 @@ height: 40px;
 }
 .imglanguage{
 	width: 20px;
+}
+.li_form_autorize{	
+	margin: 15px;
+}
+.form_login_bar{
+	margin-top: 5px;
+	height: 35px;
+}
+
+.form_login_bar input{
+	width: 250px;
+}
+#text_autoriz{
+	font-size: 15px;
+	
+}
+#reg_form_bar{
+
+	font-size: 20px;
+	width: 100px;
+	height: 30px;
+}
+#img_exit_bar{
+	width: 40px;
+	height: 40px;
+	margin-top: -11px;
+	margin-bottom: -13px;
+	background-image: url(/web/static/img/off_button.jpg);
+	background-size: 40px;
+	background-repeat: no-repeat;
+}
+#img_exit_bar:hover{
+	height: 40px;
+	width: 40px;
+	margin-top: -10px;
+	margin-bottom: -15px;
+	background-image: url(/web/static/img/off_button_on.jpg);
+	background-size: 40px;
+	background-repeat: no-repeat;
+}
+.container-fluid{
+	background-color:#1A1A1A;
+}
+
+#bar_hello{
+	margin-top: 15px;
+	float: left;
+	color: white;
+}
+#name_history_orders{
+
+	text-align: center;
+}
+
+#button_on_off{
+	margin-bottom: -15px;
+	margin-top: 12px;
+
+
+}
+#button_on_off img{
+	width: 30px;
+}
+#auth_user{
+	padding: 30px;
+	padding-left: 70px;
+	padding-right: 70px;
+	border: 1px solid #adadad;
+	width: 500px;
+	margin: auto;
+	height: 400px;
+	border-radius: 9px;
+}
+#form_auth{
+	padding-right: 50px;
+	
+	padding-left: 50px;
+}
+#submit_ayth_user{
+	width: 260px;
+}
+#registr_auth_user{
+	font-size: 20px;
+}
+.idGood{
+	width: 100px;
+}
+.button_buy_goods{
+	margin-bottom: 5px;
+	width: 100px;
+	height: 30px;
+	background: url(/web/static/img/kupitb.png);
+	background-size: 100px;
+	background-repeat: no-repeat;
+}
+.button_buy_goods:hover{
+	background: url(/web/static/img/kupitb_on.png);
+	background-size: 100px;
+	background-repeat: no-repeat;
+}
+.button_buy_goods:active{
+	background: url(/web/static/img/kupitb_off.png);
+	background-size: 100px;
+	background-repeat: no-repeat;
 }

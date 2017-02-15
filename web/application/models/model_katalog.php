@@ -18,10 +18,33 @@ class Model_Katalog extends Model
  	}
  		 public function get_goods()
  	{
+		if ($_GET['sel']) {
+			$sort = $_GET['sel'];
+			switch ($sort) {
+				case 'za':
+					$sorting = '`name` DESC';
+					break;
+				case 'az':
+					$sorting = '`name`';
+					break;
+				case 'maxmin':
+					$sorting = '`price` DESC';
+					break;
+				case 'minmax':
+					$sorting = '`price`';
+					break;
+				default:
+					$sorting = '`rating` DESC';
+					break;
+			}
+			$query  = "SELECT * FROM `goods` WHERE `public` = 1 ORDER BY $sorting ";
+		return $data = $this->db->makeGoods($query,'id');
+		}else{
 
- 		$query  = "SELECT * FROM `goods` WHERE `public` = 1";
+
+ 		$query  = "SELECT * FROM `goods` WHERE `public` = 1 ORDER BY `rating` DESC";
 		return $this->db->makeGoods($query,'id');
- 	}
+ 	}}
  		 public function get_colors()
  	{
 
@@ -49,7 +72,9 @@ class Model_Katalog extends Model
 			$value['feche'] = $this->feche;
 			$goodds[$key]=$value;
 
- 		}
+ 		}if ($goodds) {
+ 			
+ 		
  		foreach ($goodds as $ky => $vue) {
  			$query = "SELECT * 
 			 	  FROM `colors` 
@@ -60,7 +85,7 @@ class Model_Katalog extends Model
 			$this->feche =  $this->db->makeQuery($query);
 			$vue['color'] = $this->feche;
 			 $goodsds[$ky]=$vue;
- 		}return $goodsds;
+ 		}}return $goodsds;
 
  	}
  	function getimages($description){

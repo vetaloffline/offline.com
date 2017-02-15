@@ -24,6 +24,7 @@ class Controller_user extends Controller
 		if ($auth) {
 			$this->model->authorization();
 		}
+		
 		$this->view->generate('user_auth_view.php','template_view.php',$data);
 	}
 

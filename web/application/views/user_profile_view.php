@@ -1,6 +1,3 @@
-<?
-include "menu.php";
-?>
 <div class="body_center">
 <form action="/user/profile" method="POST">
 	<div class="profileuser">

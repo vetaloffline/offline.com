@@ -11,10 +11,7 @@ padding-left:15px;
 padding-right:15px;
 	text-align: center;
 }
-.menu_cen_p{
-
-
-	
+.menu_cen_p{	
 }
 .imgavaprofi{
 	width: 50px;
@@ -60,20 +57,38 @@ margin-top:1px;
 	margin: auto;
 	width: 180px;
 }
-.idGood1{
-		
-	margin-left: 0px;
-	display: block;
-	background: url(/administrator/images/kupitb.png);
-	width: 101px;
-	height: 34px;
-}
+.button_buy_goods_body{
+	margin-top: 20px;
+	width: 200px;
+	height: 100px;
 
+}
+.button_buy_goods{
+	width: 150px;
+	height: 50px;
+	background: url(/web/static/img/kupitb.png);
+	background-size: 150px;
+	background-repeat: no-repeat;
+}
+.button_buy_goods:hover{
+	
+
+	background: url(/web/static/img/kupitb_on.png);
+	background-size: 150px;
+	background-repeat: no-repeat;
+}
+.button_buy_goods:active{
+	
+
+	background: url(/web/static/img/kupitb_off.png);
+	background-size: 150px;
+	background-repeat: no-repeat;
+}
 .demo_a{
 float: left;
 	width:74px;
 	height: 28px;
-	background: url(/administrator/images/video.png);
+	background: url(/web/static/img/video.png);
 	background-repeat: no-repeat;
 	text-align:center;
 	display: block;
@@ -87,7 +102,7 @@ float: left;
 float: left;
 	width:70px;
 	height: 16px;
-	background: url(../images/video.png);
+	background: url(/web/static/img/video.png);
 	background-repeat: no-repeat;
 	text-align:center;
 	display: block;
@@ -101,7 +116,7 @@ float: left;
 	float: left;
 	width:74px;
 	height: 28px;
-	background: url(../images/video2.png);
+	background: url(/web/static/img/video2.png);
 	background-repeat: no-repeat;
 	text-align:center;
 	display: block;
@@ -116,7 +131,7 @@ float: left;
 float: left;
 	width:70px;
 	height: 16px;
-	background: url(../images/video2.png);
+	background: url(/web/static/img/video2.png);
 	background-repeat: no-repeat;
 	text-align:center;
 	display: block;

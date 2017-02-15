@@ -20,7 +20,8 @@ class Model_basket extends Model
 		}
 
 		function basketAdd(){
-			$id=$_GET['id'][1];
+			$id=$_GET['id'];
+			//var_dump($id);
 			$ass=unserialize($_COOKIE['basket']);
 
 			if($ass[$id]==false)
@@ -46,7 +47,7 @@ class Model_basket extends Model
 		}
 
 		function basketdel(){
-			$id=$_GET['id'][1];
+			$id=$_GET['id'];
 			$arr=unserialize($_COOKIE['basket']);
 			unset($arr[$id]);
 			$seri=serialize($arr);
@@ -55,7 +56,7 @@ class Model_basket extends Model
 		}
 
 		function basketinput(){
-			$id=$_GET['id'][2];
+			$id=$_GET['id'];
 			$kolTov=trim(htmlspecialchars(strip_tags($_GET['kolTov'])));
 			$arr=unserialize($_COOKIE['basket']);
 			if(ctype_digit($kolTov))
@@ -71,7 +72,7 @@ class Model_basket extends Model
 		}
 
 		function basketMin(){
-			$id=$_GET['id'][1];
+			$id=$_GET['id'];
 			$arr=unserialize($_COOKIE['basket']);
 			if($arr[$id]>1)
 				{

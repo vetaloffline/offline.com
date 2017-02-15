@@ -1,5 +1,4 @@
 <link rel="stylesheet" type="text/css" href="/web/css/style_basket.css">
-<?include "menu.php";?>
 <div class="body_center">
 <pre> </pre>
 <div class="baskeet_glav">
@@ -36,6 +35,7 @@ foreach ($bask as $k => $v){;?>
 			<form action="/basket/basketinput">
 				<div><input type="text" name="kolTov" value="<?=$v?>" class="inp_b" maxlength="6" pattern="\d+" ></div>
 				<input type="hidden" name="id" value="<?=$k?>">
+				
 			</form>
 			<div class="plus_b">
 				<a href="/basket/basketAdd?id=<?=$k?>">+</a>
