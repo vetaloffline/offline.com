@@ -739,3 +739,51 @@ height: 40px;
 	background-size: 100px;
 	background-repeat: no-repeat;
 }
+.korz_pok{
+	border: 1px solid;
+}
+#ssadsda{
+	color: white;
+	border: 1px solid;
+	width: 150px;
+	height: 35px;
+	margin-left: 9px;
+
+}
+#ssadsda:hover{
+	color: white;
+}
+#testselect{
+	width: 150px;
+}
+.content{
+	width: 170px;
+}
+#price{
+
+	width: 120px;
+	
+}
+#input_price{
+	float: left;
+
+}
+#slider-range{
+	margin-top: 5px;
+	width: 165px;
+	margin-bottom: 5px;
+}
+#asdsad{
+
+}
+.button_submit{
+	float: right;
+}
+#body_input_price{
+
+	width: 170px;
+	height: 40px;
+}
+#body_body_price{
+	margin-top: 10px;
+}

@@ -1,4 +1,5 @@
 <?php
+	require '/kint/Kint.class.php';
 	require_once "config/config.php";
 	require_once 'lib/lib.php';
 	require_once "core/db.php";

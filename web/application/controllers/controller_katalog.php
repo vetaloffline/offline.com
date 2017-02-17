@@ -19,7 +19,9 @@ class Controller_katalog extends Controller
 	{	
 		$this->colorg = $this->model->get_idcolor();
 		$this->fef = $this->model->get_idfech();
-		$this->goods = $this->model->get_goods();
+		$this->goods_colors_filtr = $this->model->get_id_good_colors();
+		$this->goods_feches_filtr = $this->model->get_id_good_feches();
+		$this->goods = $this->model->get_goods($this->goods_colors_filtr,$this->goods_feches_filtr);
 		$this->idcolor = $this->model->get_colors();
 		$this->idfec = $this->model->get_feche();
 		$this->feche = $this->model->MakeFeche();

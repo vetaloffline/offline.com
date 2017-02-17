@@ -1,7 +1,9 @@
 <div class="body_catalog">
 <?include "menu.php";
 if ($goods) {
+
 foreach ($goods as $key => $good) {
+
 	 ?>
 	<div class="good">
 		<div class="good_left">
@@ -46,12 +48,12 @@ foreach ($goods as $key => $good) {
 				</div><?}?>
 				<?if($good["oldprice"]){?>
 				<div class="oldPrice1">
-					<b><span class="oldPrice2"><?=$good["oldprice"]?></span></b><span class="grn">грн</span>
+					<b><span class="oldPrice2"><?=$good["oldprice"]?></span></b><span class="grn"><small> грн</small></span>
 				</div>
 				<?}?>
 				<div class="ss123">
 					<div class="price">
-						<b><span class="price1"><?=$good["price"]?></span></b><span class="grn">грн</span>
+						<b><span class="price1"><?=$good["price"]?></span></b><span class="grn"><small> грн</small></span>
 					</div>
 					<div class="reiting">
 						<div class="reiting1">

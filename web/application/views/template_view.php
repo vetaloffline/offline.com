@@ -8,6 +8,9 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="/web/font-awesome/css/font-awesome.min.css">
 	<script src="//ulogin.ru/js/ulogin.js"></script>
+	<link rel="stylesheet" href="ui/jquery-ui.css">
+	<script src="ui/jquery-ui.js"></script>
+	<link rel="stylesheet" href="ui/jquery-ui.css">
 </head>
 <body>
 	<div class="html_g">
