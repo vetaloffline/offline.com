@@ -20,9 +20,9 @@
 					</div>
 					<ul class="nav navbar-nav">
 						<li><a href="/admin/orders">Список заказов</a></li>
-						<li><a href="/admin/goodslist">Каталог</a></li>
-						<li><a href="/admin/users">Настройки пользователей</a></li>
-						<li><a href="/admin/goodadd">Добавить товар</a></li>
+						<?if($_SESSION['role'] =='10'){?><li><a href="/admin/goodslist">Каталог</a></li><?}?>
+						<?if($_SESSION['role'] =='10'){?><li><a href="/admin/users">Настройки пользователей</a></li><?}?>
+						<?if($_SESSION['role'] =='10'){?><li><a href="/admin/goodadd">Добавить товар</a></li><?}?>
 					</ul>
 				</div>
 			</nav>
@@ -33,10 +33,10 @@
 					<div class="row content">
 						<div class="col-sm-3 sidenav">
 							<ul class="nav nav-pills nav-stacked menu_navbar">
-								<li class="li_menu_admin"><a href="/admin/goodslist">Каталог</a></li>
-								<li class="li_menu_admin"><a href="/admin/goodadd">Добавить товар</a></li>
+								<?if($_SESSION['role'] =='10'){?><li class="li_menu_admin"><a href="/admin/goodslist">Каталог</a></li><?}?>
+								<?if($_SESSION['role'] =='10'){?><li class="li_menu_admin"><a href="/admin/goodadd">Добавить товар</a></li><?}?>
 								<li class="li_menu_admin"><a href="/admin/orders">Список заказов</a></li>
-								<li class="li_menu_admin"><a href="/admin/users">Пользователи</a></li>
+								<?if($_SESSION['role'] =='10'){?><li class="li_menu_admin"><a href="/admin/users">Пользователи</a></li><?}?>
 							</ul><br>
 						</div>
 						<div class="col-sm-9">

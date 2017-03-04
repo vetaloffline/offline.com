@@ -79,7 +79,7 @@
 								</li><?}else{?>
 								<?if ($_SESSION['role'] == 10 || $_SESSION['role'] == 30) {?>
 									<li>
-									<a href="/admin/goodslist">ADMIN</a>
+									<a href="/admin/orders">ADMIN</a>
 								</li>
 								<?}?>
 								<li class="dropdown">
